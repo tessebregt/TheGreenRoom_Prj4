@@ -60,47 +60,154 @@
     <!-- End of navigation bar -->
 
     <!-- Start of main placeholder in landing page -->
-	  <div class="video-container">	   
- 		<video autoplay muted loop>
-  			<source src="images/homepagevideo.mp4" type="video/mp4">
-		</video>
-		<div id="top" class="header-content container p-b-2 text-overlay-video">
-			<div class="header-content container-fluid">
-					<div>
-						<h1 class="display-1 p-t-2 m-b-3">
-								We Are<br>
-								<span class="typing-words">
-									<span>Belonging</span>
-									<span>The Lasting Moments</span>
-									<span>Fueling Stories, Igniting Voices</span>
-									<span>Creativity Without Limits</span>
-									<span>The Green Room</span>
-								</span>
-						</h1>
-					</div>
-			</div>
-		</div>
-		  </div>
-	  
-    
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  <main class="h-100 d-flex flex-column justify-content-center align-items-center">
-      <img class="mb-4" src="images/2gether-transparent.png">
-      <h1>2Gether</h1>
-      <h5 class="fst-italic mb-5">Can you guys see this??? xxx Elise</h5>
-      <div class="container text-center">
-        <p>This is a page you can use as a placeholder for your future website.</p>
-        <p>Once published (which should be at the end of week 5 of the project), it can be fully integrated within your marketing campaign.</p>
-        <p>You will then replace this landing page by a full website.</p>
-        <p>To build your website, you can start with the <a href="example.html">example</a> or pick and mix elements from the UX pattern pages of this website (check menu above).</p>
-      </div>
-    </main>
+	  <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage with Video & Buttons</title>
+    <style>
+        /* Video container styling */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full-screen height */
+            overflow: hidden;
+        }
+
+        /* Video styling */
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Text overlay styling */
+        .text-overlay-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            font-weight: bold;
+            white-space: nowrap;
+            z-index: 1; /* Ensure text is on top */
+        }
+
+        /* Typing effect */
+        .typing-words::after {
+            content: '|';
+            display: inline-block;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Button container styling */
+        .button-container {
+            position: absolute;
+            top: 70%; /* Adjusted to position under the text */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between buttons */
+            z-index: 1; /* Ensure buttons are above video */
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="video-container">	   
+    <video autoplay muted loop>
+        <source src="images/homepagevideo.mp4" type="video/mp4">
+    </video>
+    <div class="text-overlay-video">
+        <h1 class="display-1">
+            We Are<br>
+            <span class="typing-words"></span>
+        </h1>
+    </div>
+
+    <!-- Button container with flexbox to display buttons horizontally -->
+    <div class="button-container">
+    <a class="btn" href="#" role="button">Menu</a>
+    <button class="btn" type="submit">Events</button>
+    <input class="btn" type="button" value="Book a Stage">
+    </div>
+</div>
+
+<script>
+    // Typing effect
+    const words = [
+        "Belonging",
+        "The Lasting Moments",
+        "Fueling Stories, Igniting Voices",
+        "Creativity Without Limits",
+        "The Green Room"
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let currentWord = '';
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const pauseTime = 1500;
+    const typingElement = document.querySelector('.typing-words');
+
+    function typeEffect() {
+        if (charIndex < words[index].length) {
+            currentWord += words[index].charAt(charIndex);
+            typingElement.innerHTML = currentWord;
+            charIndex++;
+            setTimeout(typeEffect, typingSpeed);
+        } else {
+            setTimeout(deleteEffect, pauseTime);
+        }
+    }
+
+    function deleteEffect() {
+        if (charIndex > 0) {
+            currentWord = currentWord.slice(0, -1);
+            typingElement.innerHTML = currentWord;
+            charIndex--;
+            setTimeout(deleteEffect, deletingSpeed);
+        } else {
+            index = (index + 1) % words.length;
+            setTimeout(typeEffect, typingSpeed);
+        }
+    }
+
+    typeEffect();
+</script>
+	
+	
     <!-- End of main placeholder -->
 
   </body>
