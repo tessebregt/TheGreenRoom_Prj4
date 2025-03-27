@@ -159,7 +159,46 @@ footer a:hover {
     border-color: #F0DDAB !important;
 }
 
+/* Container for the description text */
+.description-container {
+    position: absolute;
+    top: 105%; /* Adjust this to position text exactly where you want */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* You can adjust the width */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: translucent background to make the text stand out */
+    border-radius: 8px; /* Optional: rounded corners */
+}
 
+/* Styling for the text inside the description */
+.description-text {
+    font-size: 1.2rem; /* Font size for readability */
+    line-height: 1.6; /* Line height for better spacing */
+    font-family: Arial, sans-serif; /* Font family */
+}
 
+/* Box with text between video and description */
+.box-with-text {
+    width: 70%; /* The width of the box */
+    margin-left: 0; /* Align the box to the left */
+    margin-right: 0; /* Remove any right margin */
+    padding: 50px;
+    background-color: rgba(31, 61, 43, 0.7); /* Dark background with transparency */
+    border-top-right-radius: 10px; /* Round the top-right corner */
+    border-bottom-right-radius: 10px; /* Round the bottom-right corner */
+    text-align: left;
+    position: relative;
+    left: 0; /* This ensures it starts from the left */
+    margin-top: -70px; /* Vertical space above */
+    margin-bottom: 20px; /* Vertical space below */
+}
 
+.box-text {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
 
