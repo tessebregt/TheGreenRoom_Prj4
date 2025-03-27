@@ -53,7 +53,7 @@ footer a:hover {
 	display: flex; /* Enables centering */
     align-items: center; /* Centers vertically */
     justify-content: center; /* Centers horizontally */
-    color: white; /* Adjust text color for readability */
+    color: #f4e6c1; /* Adjust text color for readability */
     font-size: 2rem; /* Adjust text size */
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional text shadow for better visibility */
@@ -69,19 +69,26 @@ footer a:hover {
 }
 
 .content img {
-    width: 300px; /* Adjust image size */
-    height: 50;
+    width: 400px; /* Adjust image width */
+    height: 435px; /* Ensures proportional scaling */
+    max-height: 100%; /* Keeps it from being taller than the text */
     border-radius: 10px; /* Optional: Rounds corners */
+    object-fit: cover; /* Ensures the image fills its container */
+    flex-shrink: 0; /* Prevents image from shrinking */
+	border-radius: 10px; /* Optional: Rounds corners */
 }
 
 .content p {
 	font-size: 1.2rem;
-    color: #333; /* Adjust text color */
-	max-width: 850px; /* Prevents text from stretching too wide */
+    color: #1f3d2b; /* Adjust text color */
+	max-width: 1000px; /* Prevents text from stretching too wide */
+	min-height: 435px;
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 	border-radius: 5px; /* Rounded corners */
 	padding: 40px;
-	background-color: #F1E2BF
+	background-color: #F1E2BF;
+	display: flex; /* Makes sure the box stretches */
+    align-items: center; /* Centers text inside */
 }
 
 /* Grid Container Styling */
@@ -122,7 +129,7 @@ footer a:hover {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: black; /* Title text color */
+    color: #1f3d2b; /* Title text color */
     z-index: 1; /* Ensure the title stays on top */
     position: relative; /* Keep title in the normal flow */
     text-align: center;
@@ -136,7 +143,7 @@ footer a:hover {
 /* Content Box */
 .content-box {
     background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
-    color: white;
+    color: #f4e6c1;
     position: absolute; /* Position it inside the grid item */
     top: 0;
     left: 0;
@@ -157,14 +164,16 @@ footer a:hover {
 .grid-item:hover .content-box {
     opacity: 1; /* Show the content on hover */
     visibility: visible; /* Make content visible on hover */
-    transition: opacity 0.3s ease, visibility 0s; /* Reset transition for visibility */
+    background-color: #1f3d2b;
+	transition: opacity 0.3s ease, visibility 0s; /* Reset transition for visibility */
+
 	
 }
 
 /* Initially hide the text */
 .box-text {
     visibility: hidden;
-    color: white;
+    color: ##f4e6c1;
 }
 
 /* Show text when hovering */
@@ -197,32 +206,54 @@ footer a:hover {
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
 }
 
-.image-grid {
-    display: flex; /* Arranges the boxes in a row */
-    justify-content: space-between; /* Adds space between them */
-    gap: 20px; /* Adjusts spacing between boxes */
-    padding: 20px;
-}
-
+/* Individual Image Box */
 .image-box {
     background-color: #F1E2BF; /* Light gray background */
     padding: 15px;
     border-radius: 10px; /* Rounded corners */
     text-align: center; /* Centers the text */
-    width: 200px; /* Adjust width as needed */
+    width: 250px; /* Width of the box */
+    height: 550px; /* Fixed height to control the size of the box */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Aligns the image and text vertically */
+    align-items: center; /* Centers the content horizontally */
+    justify-content: flex-start; /* Makes sure content starts at the top */
+    margin-bottom: 20px; /* Adds space between boxes */
 }
 
+/* Image inside the .image-box */
 .image-box img {
-    width: 100%; /* Makes images fit the box */
-    height: auto;
-    border-radius: 10px; /* Optional: Rounds corners */
+    width: 100%; /* Makes the image fill the box's width */
+    height: 60%; /* Takes up 60% of the box height */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    border-radius: 10px; /* Optional: Rounds corners of the image */
 }
 
+/* Text under the image inside the .image-box */
 .image-box p {
     font-size: 1rem;
-    color: #333;
-    margin-top: 10px; /* Space between image and text */
+    color: #1f3d2b; /* Text color */
+    margin-top: 10px; /* Adds space between the image and the text */
+    text-align: center; /* Centers the text */
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
 }
+
+/* Image Grid - Adjust the gap between boxes */
+.image-grid {
+    display: flex; /* Arranges the boxes in a row */
+    justify-content: space-between; /* Adds space between them */
+    gap: 10px; /* Reduces the space between the boxes */
+    padding: 20px;
+}
+
+/* Image Grid - Adjust the gap between boxes */
+.image-grid {
+    display: flex; /* Arranges the boxes in a row */
+    justify-content: space-between; /* Adds space between them */
+    gap: 10px; /* Reduces the space between the boxes */
+    padding: 20px;
+}
+
 
 
 /* Changing button color */
