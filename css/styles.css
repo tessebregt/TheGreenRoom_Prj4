@@ -47,7 +47,7 @@ footer a:hover {
 .banner {
     width: 100%;
     height: 400px; 
-    background-image: url("../images/theatrebg.jpeg");
+    background-image: url("../images/about us/banner1.jpg");
     background-size: cover;
     background-position: bottom;
 	display: flex; /* Enables centering */
@@ -69,21 +69,76 @@ footer a:hover {
 }
 
 .content img {
-    width: 500px; /* Adjust image size */
-    height: auto;
+    width: 300px; /* Adjust image size */
+    height: 50;
     border-radius: 10px; /* Optional: Rounds corners */
 }
 
 .content p {
-    font-size: 1.2rem;
+	font-size: 1.2rem;
     color: #333; /* Adjust text color */
-    max-width: 500px; /* Prevents text from stretching too wide */
+	max-width: 850px; /* Prevents text from stretching too wide */
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	border-radius: 5px; /* Rounded corners */
+	padding: 40px;
+	background-color: #F1E2BF
 }
 
 
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    gap: 40px; /* Adds space between paragraphs */
+    padding: 40px;
+    max-width: 1500px; /* Adjust width as needed */
+    margin: 0 auto; /* Centers the grid */
+}
 
+.section-title {
+    text-align: center; /* Centers the title */
+    font-size: 2rem; /* Adjust title size */
+    color: #F1E2BF; /* Dark text color */
+    margin-bottom: 20px; /* Space between title and boxes */
+    font-weight: bold;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
 
+.grid-item {
+    background-color: #f1e2bf; /* Light gray background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.1rem;
+	color: #333; /* Text color */
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
+}
+
+.image-grid {
+    display: flex; /* Arranges the boxes in a row */
+    justify-content: space-between; /* Adds space between them */
+    gap: 20px; /* Adjusts spacing between boxes */
+    padding: 20px;
+}
+
+.image-box {
+    background-color: #F1E2BF; /* Light gray background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Centers the text */
+    width: 200px; /* Adjust width as needed */
+}
+
+.image-box img {
+    width: 100%; /* Makes images fit the box */
+    height: auto;
+    border-radius: 10px; /* Optional: Rounds corners */
+}
+
+.image-box p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px; /* Space between image and text */
+}
 
 
 
