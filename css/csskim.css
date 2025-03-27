@@ -1,0 +1,255 @@
+/* Importing a Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+
+/* Changing the main font and background colour */
+
+body {
+	font-family: Raleway, sans-serif;
+	background-color: #6d2929;
+}
+
+/* Changing the background colour for the header */
+
+header {
+	background-color: #000060;
+}
+
+/* Changing the background color for the navigation bar */
+
+.navbar {
+	background-color: #f4e6c1;
+}
+
+/* Effect on social media buttons */
+
+footer a:hover {
+	opacity: .5;
+}
+
+/* Corporate navbar */
+
+#navbar-corporate a.active {
+	color: #800000;
+	font-weight: bold;
+}
+
+/* Hero Section shadow */
+
+.white-shadow {
+	text-shadow: -.01em -.01em .01em white,
+		.02em .02em .02em white,
+		0 0 .2em white,
+		0 0 .5em white;
+}
+
+
+.banner {
+    width: 100%;
+    height: 400px; 
+    background-image: url("../images/about us/banner1.jpg");
+    background-size: cover;
+    background-position: bottom;
+	display: flex; /* Enables centering */
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    color: white; /* Adjust text color for readability */
+    font-size: 2rem; /* Adjust text size */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional text shadow for better visibility */
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+
+
+.content {
+    display: flex; /* Enables side-by-side layout */
+    align-items: center; /* Aligns items vertically */
+    gap: 20px; /* Adds space between image and text */
+    padding: 20px;
+}
+
+.content img {
+    width: 300px; /* Adjust image size */
+    height: 50;
+    border-radius: 10px; /* Optional: Rounds corners */
+}
+
+.content p {
+	font-size: 1.2rem;
+    color: #333; /* Adjust text color */
+	max-width: 850px; /* Prevents text from stretching too wide */
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	border-radius: 5px; /* Rounded corners */
+	padding: 40px;
+	background-color: #F1E2BF
+}
+
+/* Grid Container Styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 30px; /* Increase the gap between the boxes */
+    padding: 20px;
+    max-width: 1000px; /* Adjust max width of the entire grid */
+    margin: 0 auto;
+}
+
+/* Individual Grid Items - Increase size */
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 40px; /* Adjust padding to make the box bigger */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 350px; /* Make the height larger */
+    width: 100%;  /* Set to 100% of the grid cell */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensure padding does not affect the overall box size */
+}
+
+/* Box hover effect */
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Style - Ensure it's always visible initially */
+.box-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black; /* Title text color */
+    z-index: 1; /* Ensure the title stays on top */
+    position: relative; /* Keep title in the normal flow */
+    text-align: center;
+	display: flex; /* Use flexbox to center vertically */
+	justify-content: center; /* Horizontally center text */
+    align-items: center; /* Vertically center text */
+    height: 100%; /* Ensure the title takes up full height */
+	transition: opacity 0.3s ease; /* Smooth transition for disappearing effect */
+}
+
+/* Content Box */
+.content-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: white;
+    position: absolute; /* Position it inside the grid item */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it takes up the full width of the grid item */
+    height: 100%; /* Ensure it takes up the full height of the grid item */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    display: flex; /* Keep it flex for centering content */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth transition for opacity */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
+
+/* Reveal content on hover */
+.grid-item:hover .content-box {
+    opacity: 1; /* Show the content on hover */
+    visibility: visible; /* Make content visible on hover */
+    transition: opacity 0.3s ease, visibility 0s; /* Reset transition for visibility */
+	
+}
+
+/* Initially hide the text */
+.box-text {
+    visibility: hidden;
+    color: white;
+}
+
+/* Show text when hovering */
+.grid-item:hover .box-text {
+    visibility: visible; /* Reveal text when hovering */
+}
+
+/* Title disappears on hover */
+.grid-item:hover .box-title {
+    opacity: 0; /* Hide title smoothly on hover */
+}
+
+
+
+.section-title {
+    text-align: center; /* Centers the title */
+    font-size: 2rem; /* Adjust title size */
+    color: #F1E2BF; /* Dark text color */
+    margin-bottom: 20px; /* Space between title and boxes */
+    font-weight: bold;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
+
+.grid-item {
+    background-color: #f1e2bf; /* Light gray background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.1rem;
+	color: #333; /* Text color */
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
+}
+
+.image-grid {
+    display: flex; /* Arranges the boxes in a row */
+    justify-content: space-between; /* Adds space between them */
+    gap: 20px; /* Adjusts spacing between boxes */
+    padding: 20px;
+}
+
+.image-box {
+    background-color: #F1E2BF; /* Light gray background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Centers the text */
+    width: 200px; /* Adjust width as needed */
+}
+
+.image-box img {
+    width: 100%; /* Makes images fit the box */
+    height: auto;
+    border-radius: 10px; /* Optional: Rounds corners */
+}
+
+.image-box p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px; /* Space between image and text */
+}
+
+
+/* Changing button color */
+.btn {
+    background-color: #1f3d2b !important; /* Green background */
+    color: white !important; /* White text */
+    border: 2px solid #f4e6c1 !important; /* Border */
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1A3325 !important; /* Darker green */
+    border-color: #F0DDAB !important;
+}
+
+
+
+
+
+
+
+
+
+
+
