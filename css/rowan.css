@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* CSS Document */
+/* General Styles */
+body {
+    background-color: #f8e9c4; /* Light cream background */
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.header {
+    background-color: #a36b41; /* Warm brown */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Subscription Section */
+.subscription-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.subscription-box {
+    background-color: #21412a; /* Dark green */
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.subscription-box h3 {
+    font-size: 1.8rem;
+}
+
+.subscription-box h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* List Styling */
+.subscription-box ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.subscription-box li {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Select Button */
+.btn-select {
+    background-color: #f8e9c4;
+    color: #7a2f1b;
+    font-weight: bold;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-select:hover {
+    background-color: #e0d3b8;
+    cursor: pointer;
+}
