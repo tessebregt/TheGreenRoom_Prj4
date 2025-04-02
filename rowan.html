@@ -2,116 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<link rel="stylesheet" href="rowan.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Subscription Plans</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8e9c4;
-            font-family: 'Recoleta', serif;
-        }
-        /* Navbar Styling */
-        .navbar {
-            background-color: #a36b41;
-            padding: 10px 0;
-        }
-        .navbar-brand img {
-            height: 50px;
-            margin-right: 15px;
-        }
-        .navbar-nav .nav-link {
-            color: #f8e9c4;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 10px 15px;
-        }
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: #e0d3b8;
-        }
-        .navbar-nav .nav-link.active {
-            font-weight: bold;
-        }
-        .dropdown-menu {
-            background-color: #a36b41;
-        }
-        .dropdown-item {
-            color: white;
-        }
-        .dropdown-item:hover {
-            background-color: #8c5633;
-        }
-        /* Header Styling */
-        .header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f8e9c4;
-        }
-        .header h1 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #7a2f1b;
-        }
-        .header p {
-            font-size: 18px;
-            font-weight: bold;
-            color: #21412a;
-        }
-        /* Subscription Box Styling */
-        .subscription-section {
-            text-align: center;
-            margin-top: -10px;
-        }
-        .subscription-box {
-            background-color: #21412a;
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            width: 40%;
-            margin: 15px;
-        }
-        .btn-select {
-            background-color: #f8e9c4;
-            color: #7a2f1b;
-            font-weight: bold;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-        }
-        .btn-select:hover {
-            background-color: #e0d3b8;
-        }
-    </style>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/rowan.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-             <img src="images/thegreenroomlogo.png" width="50" alt="Breda University of Applied Sciences">
+
+     <!-- Navigation bar, adapted from https://getbootstrap.com/docs/5.1/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/thegreenroomlogo.png" width="50" alt="Breda University of Applied Sciences">
         </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Subscriptions</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Corporate Information
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="example.html">About Us</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="https://buas-media-interactive.github.io/prj4-guide/" target="_blank">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Corporate Information
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="hero.html">Content</a></li>
@@ -127,14 +51,15 @@
     <!-- End of navigation bar -->
 
     <!-- Header -->
-    <div class="header">
+    <header class="header">
         <h1>Never Miss an <strong>Event</strong></h1>
         <p>Be the first to know about live performances, new menu items, and more!</p>
-    </div>
+    </header>
 
     <!-- Subscription Options -->
-    <div class="container subscription-section">
+    <section class="container subscription-section">
         <div class="row justify-content-center">
+            <!-- Explorer Plan -->
             <div class="col-md-5 subscription-box">
                 <h3><strong>Explorer</strong> Subscription</h3>
                 <hr>
@@ -146,6 +71,7 @@
                 </ul>
                 <button class="btn btn-select">Select</button>
             </div>
+            <!-- Unlimited Plan -->
             <div class="col-md-5 subscription-box">
                 <h3><strong>Unlimited</strong> Subscription</h3>
                 <hr>
@@ -158,35 +84,29 @@
                 <button class="btn btn-select">Select</button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-	    <!-- Footer -->
-    <footer class="footer mt-5 py-4 text-center" style="background-color: #a36b41; color: #f8e9c4;">
+    <!-- Footer -->
+    <footer class="footer mt-5 py-4 text-center">
         <div class="container">
-            <!-- Logo -->
             <img src="images/thegreenroomlogo.png" alt="The Green Room Logo" width="100">
-            
-            <!-- Slogan -->
-            <p class="mt-2" style="font-style: oblique;">Step inside, take a seat, and let the story unfold</p>
-
-            <!-- Socials -->
+            <p class="mt-2">Step inside, take a seat, and let the story unfold</p>
             <a href="https://www.instagram.com/" target="_blank">
                 <img src="images/instalogo.png" alt="Instagram" width="100">
             </a>
-
-            <!-- Navigation Links -->
             <div class="mt-3">
-                <a href="#" style="color: #e0d3b8; text-decoration: none; margin: 0 10px;">About Us</a> |
-                <a href="#" style="color: #e0d3b8; text-decoration: none; margin: 0 10px;">Corporate</a> |
-                <a href="#" style="color: #e0d3b8; text-decoration: none; margin: 0 10px;">Book an Event</a> |
-                <a href="#" style="color: #e0d3b8; text-decoration: none; margin: 0 10px;">Book a Stage</a> |
-                <a href="#" style="color: #e0d3b8; text-decoration: none; margin: 0 10px;">Contact Us</a>
+                <a href="#">About Us</a> |
+                <a href="#">Corporate</a> |
+                <a href="#">Book an Event</a> |
+                <a href="#">Book a Stage</a> |
+                <a href="#">Contact Us</a>
             </div>
-
-            <!-- Copyright -->
-            <p class="mt-3" style="font-size: 14px;">&copy; 2025 All Rights Reserved / Designed by The Green Room</p>
+            <p class="mt-3">&copy; 2025 All Rights Reserved / Designed by The Green Room</p>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
