@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://www.cufonfonts.com/font/recoleta');
+
 body {
-    font-family: Arial, sans-serif;
+   .berkshire-swash-regular {
+  font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+}
     background-color: #f4e6c1;
     color: #3d1d0d;
     margin: 0;
     padding: 0;
 }
+
 .navbar {
     background-color: #ad6a42;
     padding: 15px;
@@ -58,14 +66,14 @@ body {
 }
 
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Recoleta', serif;
     background-color: #f4e6c1;
     color: #6d2929;
     margin: 0;
     padding: 0;
 }
 .header {
-    background: linear-gradient(to bottom, #945835, #b87f5e);
+    background: linear-gradient(to bottom, #804420, #b87f5e);
     padding: 15px 0;
     text-align: center;
     color: white;
@@ -93,6 +101,7 @@ body {
 h1 {
     font-size: 28px;
     margin-bottom: 10px;
+
 }
 .form-group {
     margin-bottom: 15px;
@@ -108,14 +117,14 @@ button {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #ad6a42;
+    background: linear-gradient(to bottom, #804420, #b87f5e);
     color: white;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
 }
 button:hover {
-    background-color: #5A2E1E;
+    background: linear-gradient(to bottom, #5A2E1E, #7A4430); /* Adjusted hover gradient */
 }
 @media (max-width: 768px) {
     .container {
