@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #3d1d0d;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #ad6a42;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+.navbar a {
+    color: #f4e6c1;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: #f4e6c1;
+}
+
+  .contact-text {
+    text-align: center; /* Center horizontally */
+    display: flex;
+    justify-content: center; 
+}
+
+.contact-text {
+    max-width: 500px;
+    margin-right: 50px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background: #6d2929;
+    color: white;
+}
+.contact-form button {
+    background: #ad6a42;
+    border: none;
+    padding: 10px 20px;
+    color: #f4e6c1;
+    cursor: pointer;
+    font-weight: bold;
+}
+.spotlight-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
