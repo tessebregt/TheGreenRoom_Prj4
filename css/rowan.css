@@ -1,80 +1,110 @@
-@charset "UTF-8";
-/* CSS Document */
 /* General Styles */
 body {
-    background-color: #f8e9c4; /* Light cream background */
-    font-family: 'Georgia', serif;
-    margin: 0;
-    padding: 0;
+    background-color: #f8e9c4;
+    font-family: 'Recoleta', serif;
 }
 
-/* Header Section */
-.header {
-    background-color: #a36b41; /* Warm brown */
+/* Navbar Styling */
+.navbar {
+    background-color: #a36b41;
+    padding: 10px 0;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #f8e9c4;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #e0d3b8;
+}
+
+.dropdown-menu {
+    background-color: #a36b41;
+}
+
+.dropdown-item {
     color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #8c5633;
+}
+
+/* Header Styling */
+.header {
     text-align: center;
     padding: 20px 0;
+    background-color: #f8e9c4;
 }
 
 .header h1 {
-    font-size: 2.5rem;
+    font-size: 36px;
     font-weight: bold;
+    color: #7a2f1b;
 }
 
 .header p {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: bold;
+    color: #21412a;
 }
 
 /* Subscription Section */
 .subscription-section {
     text-align: center;
-    margin-top: 40px;
+    margin-top: -10px;
 }
 
 .subscription-box {
-    background-color: #21412a; /* Dark green */
+    background-color: #21412a;
     color: white;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    margin: 15px;
 }
 
-.subscription-box h3 {
-    font-size: 1.8rem;
-}
-
-.subscription-box h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 15px 0;
-}
-
-/* List Styling */
-.subscription-box ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-.subscription-box li {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-
-/* Select Button */
+/* Button Styling */
 .btn-select {
     background-color: #f8e9c4;
     color: #7a2f1b;
     font-weight: bold;
     border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    transition: background 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .btn-select:hover {
     background-color: #e0d3b8;
-    cursor: pointer;
 }
+
+/* Footer Styling */
+.footer {
+    background-color: #a36b41;
+    color: #f8e9c4;
+}
+
+.footer p {
+    font-style: oblique;
+}
+
+.footer a {
+    color: #e0d3b8;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+    
