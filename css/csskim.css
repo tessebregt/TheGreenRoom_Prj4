@@ -20,7 +20,7 @@
 /* Left Section Styling */
 .left-section {
     width: 50%; /* Ensure the left side takes up 50% */
-    background-color: #f3f3f3;
+    background-color: #f1e4c2;
     padding: 50px;
     text-align: center;
     display: flex;
@@ -28,7 +28,7 @@
     justify-content: flex-start; /* Ensures the content starts from the top */
     align-items: center;
     overflow: hidden;
-    height: 100%; /* Ensures it fills the full container height */
+    height: 150%; /* Ensures it fills the full container height */
 }
 
 /* Content Styling (Image Above Text) */
@@ -65,11 +65,11 @@
 /* Right Section Styling */
 .right-section {
     width: 50%; /* Ensure the right side takes up 50% */
-    background-color: #0077cc;
+    background-color:#6c292b;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 150%;
     overflow-y: auto;
 }
 
@@ -149,7 +149,7 @@
 .section-title {
     text-align: center;
     font-size: 2rem;
-    color: #F1E2BF;
+    color: #1f3d2b;
     margin-bottom: 20px;
     font-weight: bold;
     font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
@@ -161,10 +161,11 @@
     justify-content: space-between;
     gap: 10px;
     padding: 20px;
+	background-color: #f1e4c2
 }
 
 .image-box {
-    background-color: #F1E2BF;
+    background-color:#6d2929;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -185,7 +186,7 @@
 
 .image-box p {
     font-size: 1rem;
-    color: #1f3d2b;
+    color: #f1e4c2;
     margin-top: 10px;
     text-align: center;
     font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
