@@ -17,11 +17,21 @@ body {
 
 .navbar-nav .nav-link {
     color: #f8e9c4;
-    font-weight: bold;
     font-size: 16px;
     padding: 10px 15px;
 }
 
+/* Ensure Home has the same color as other links */
+.navbar-nav .home-link {
+    color: #f8e9c4 !important;
+}
+
+/* Make Subscriptions bold */
+.navbar-nav .subscription-bold {
+    font-weight: bold;
+}
+
+/* Hover & Active State */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: #e0d3b8;
