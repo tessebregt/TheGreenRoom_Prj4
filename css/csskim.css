@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
 
 /* General Reset */
-* {
+•⁠  ⁠{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,15 +13,15 @@
 /* Main Container */
 .container {
     display: flex;
-    height: 100vh;
+    height: 100%;
     background-color: #6d2929;
 }
 
 /* Left Section Styling */
 .left-section {
     width: 50%; /* Ensure the left side takes up 50% */
-    background-color: #f3f3f3;
-    padding: 50px;
+    background-color: #f1e4c2;
+    padding: 55px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -41,8 +41,8 @@
 }
 
 .content img {
-    width: 400px;
-    height: 435px;
+    width: 300px;
+    height: 335px;
     border-radius: 10px;
     object-fit: cover;
     flex-shrink: 0;
@@ -55,7 +55,6 @@
     min-height: 200px;
     font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
     border-radius: 5px;
-    padding: 40px;
     background-color: #F1E2BF;
     display: flex;
     align-items: center;
@@ -65,11 +64,12 @@
 /* Right Section Styling */
 .right-section {
     width: 50%; /* Ensure the right side takes up 50% */
-    background-color: #0077cc;
+    background-color:#6c292b;
     display: flex;
-    justify-content: center;
+	flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+	padding: 50px;
     overflow-y: auto;
 }
 
@@ -149,10 +149,12 @@
 .section-title {
     text-align: center;
     font-size: 2rem;
-    color: #F1E2BF;
-    margin-bottom: 20px;
+    background-color: #F1E2BF;
+	color: #6C292B;
+	padding: 20px;
     font-weight: bold;
     font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	
 }
 
 /* Image Grid for Meet Our Team */
@@ -161,10 +163,11 @@
     justify-content: space-between;
     gap: 10px;
     padding: 20px;
+	background-color: #F1E4C2;
 }
 
 .image-box {
-    background-color: #F1E2BF;
+    background-color: #6C292B;
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -185,7 +188,7 @@
 
 .image-box p {
     font-size: 1rem;
-    color: #1f3d2b;
+    color: #FFFFFF;
     margin-top: 10px;
     text-align: center;
     font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
