@@ -64,83 +64,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage with Video & Buttons</title>
-    <style>
-        /* Video container styling */
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Full-screen height */
-            overflow: hidden;
-        }
-
-        /* Video styling */
-        .video-container video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Text overlay styling */
-        .text-overlay-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 3rem;
-            text-align: center;
-            font-weight: bold;
-            white-space: nowrap;
-            z-index: 1; /* Ensure text is on top */
-        }
-
-        /* Typing effect */
-        .typing-words::after {
-            content: '|';
-            display: inline-block;
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        /* Button container styling */
-        .button-container {
-            position: absolute;
-            top: 70%; /* Adjusted to position under the text */
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Space between buttons */
-            z-index: 1; /* Ensure buttons are above video */
-        }
-
-        /* Button styling */
-        .btn {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Homepage with Video and Buttons</title>
+   
 </head>
 <body>
 
@@ -213,17 +138,89 @@
         Welcome ladies and gentlemen to an environment where moments, connections, and personal stories naturally take place, one cup at a time. Step inside, take a seat, and let the story unfold.
     </p>
 </div>
-
-<!-- Description Text Container below the video -->
-<div class="description-container">
-    <p class="description-text">
-        The Green Room is your go-to spot to get together for theater lovers, creatives, and anyone who enjoys a great story.<br><br>
-        By day, we’re a cozy café, perfect for sipping coffee, reading scripts, or sharing ideas with like-minded souls. By night, we transform into a lively theater bar, serving themed cocktails alongside open mic nights, improv shows, cabaret performances, and immersive experiences. There’s always something happening, and you’re always invited.<br><br>
-        Whether you’re here to perform, watch, or simply soak in the atmosphere, The Green Room is a space where creativity thrives, connections spark, and every voice is heard. Plus, with affordable drinks and event tickets, we make sure the arts are for everyone.<br><br>
-        So come in, get comfortable, and let’s make some unforgettable memories together!
-    </p>
-</div>
 	
+	<div class="image-grid">
+        <div class="image-box">
+            <img src="images/coffee.jpg" alt="Foto Coffee">
+            <p>Day <br><br> Blah blah</p>
+        </div>
+        <div class="image-box">
+            <img src="images/cocktail.jpg" alt="Foto Cocktail">
+            <p>Night <br><br> Blah blah</p>
+        </div>
+        <div class="image-box">
+            <img src="images/cocktial.jpg" alt="Image Cocktail2">
+            <p>Event<br><br> Blah blah</p>
+        </div>
+        <div class="image-box">
+            <img src="images/coffee.jpg" alt="Image Coffee2">
+            <p>Rent<br><br>Blah blah</p>
+        </div>
+    </div>
+	
+	 <div class="container">
+    <div class="left-panel">
+      <h1>How it <span>Works</span> <span class="emoji">🎭</span></h1>
+      <p>By day, we’re a cozy café serving coffee, breakfast, and lunch, a space to meet, create, or unwind. By night, a lively jazz bar and theatre hub, where music and performance bring people together.</p>
+      <p class="cta">Step inside, take a seat, and let the story unfold!</p>
+      <button>Book an Event</button>
+    </div>
+
+    <div class="right-panel">
+      <div class="card">
+        <img src="daytime.jpg" alt="Daytime">
+        <div class="label">Daytime</div>
+      </div>
+      <div class="card">
+        <img src="nighttime.jpg" alt="Nighttime">
+        <div class="label">Nighttime</div>
+      </div>
+      <div class="card">
+        <img src="events.jpg" alt="Events">
+        <div class="label">Events</div>
+      </div>
+    </div>
+  </div>
+	
+	<section class="events-section">
+  <h2>Upcoming <span>Events</span> <span class="ticket-icon">🎟️</span></h2>
+
+  <div class="events-carousel">
+    <!-- Left arrow -->
+    <button class="carousel-arrow left">❮</button>
+
+    <!-- Event cards -->
+    <div class="event-card">
+      <img src="jazz.jpg" alt="Live Jazz Fridays">
+      <div class="card-info">
+        <h3>Live Jazz Fridays</h3>
+        <button class="book-btn">Book</button>
+        <p>Every Friday | 8:00 PM</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="openmic.jpg" alt="Open Mic Night">
+      <div class="card-info">
+        <h3>Open Mic Night</h3>
+        <button class="book-btn">Book</button>
+        <p>April 10th | 7:30 PM</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="romeo.jpg" alt="Romeo & Juliet">
+      <div class="card-info">
+        <h3>Romeo and Juliet: A Modern Twist</h3>
+        <button class="book-btn">Book</button>
+        <p>April 20th | 7:30 PM</p>
+      </div>
+    </div>
+
+    <!-- Right arrow -->
+    <button class="carousel-arrow right">❯</button>
+  </div>
+</section>
 	
     <!-- End of main placeholder -->
 
