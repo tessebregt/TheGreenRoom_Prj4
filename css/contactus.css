@@ -210,6 +210,33 @@ button:hover {
     }
 }
 
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.video-container {
+  flex: 1.7; /* more horizontal space */
+  max-width: 65%;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5; /* slightly wider, less tall */
+  display: block;
+  object-fit: cover; /* keeps the video filling the area nicely */
+}
+
+.form-container {
+  flex: 1;
+}
+
+
+
+
 /* Footer link hover effect */
 footer a:hover {
     opacity: .5;
