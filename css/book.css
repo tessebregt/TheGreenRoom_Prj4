@@ -125,11 +125,11 @@ body {
 table {
   width: 90%;
   max-width: 1000px;
-  background-color: #F9F7F3;
+  background-color: #6d2929 !important;
   border-collapse: collapse;
-  border: 1px solid #ccc;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
+
 
 th, td {
   text-align: center;
@@ -141,6 +141,28 @@ thead th {
   background-color: #F9F7F3;
   font-weight: bold;
 }
+
+
+.colorbgtab {
+  background-color: #6d2929;
+}
+
+td {
+  background-color: #6d2929;
+}
+
+
+
+.clickable:hover {
+  background-color: #f0f8ff;
+  transition: background-color 0.3s ease;
+}
+
+.table-wrapper table th {
+  background-color: #1f3d2b;
+  color: white; /* Optional: for better contrast */
+}
+
 
 /* Curtains basic styling */
 .curtain {
@@ -174,8 +196,8 @@ footer {
 
 /* If curtain image has large dimensions, make sure it's not overflowing */
 .curtain img {
-  height: 100%;
-  max-height: 100vh;
+  height: 120%;
+  max-height: 140vh;
   object-fit: cover;
 }
 

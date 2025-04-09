@@ -2,7 +2,90 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
 
+.navbar {
+    background-color: #ad6a42;
+    padding: 10px 0;
+}
 
+.navbar-brand img {
+    height: 50px;
+    margin-right: 5px; /* Reduced margin to decrease spacing */
+}
+
+.navbar-nav {
+    gap: 10px; /* Ensures equal spacing between all nav items */
+}
+
+.navbar-nav .nav-link {
+    color: #f8e9c4;
+    font-size: 16px;
+    padding: 10px 12px; /* Adjusted padding for consistent spacing */
+}
+
+/* Always set Subscriptions to color #6d2929 */
+.navbar-nav .subscription-link {
+    color: #6d2929 !important;
+}
+
+/* Hover effect for main navbar links (Home, About Us, Contact Us, Subscriptions, Corporate Info) */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #6d2929 !important;
+}
+
+/* Ensure Home has the same color as other links */
+.navbar-nav .home-link {
+    color: #f8e9c4 !important;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #ad6a42;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #f4e6c1 !important;
+    font-size: 16px;
+    padding: 10px 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover/Active effect for dropdown items */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active {
+    color: #6d2929 !important;
+    background-color: transparent !important;
+}
+
+/* Make Subscriptions bold */
+.navbar-nav .subscription-bold {
+    font-weight: bold;
+}
+
+/* Force Subscriptions link to always be #6d2929 */
+.navbar-nav .nav-link.subscription-link {
+    color: #6d2929 !important;
+}
+	
+/* Hover & Active State */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #e0d3b8;
+}
+
+.dropdown-menu {
+    background-color: #a36b41;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #ad6a42;
+}
 /* General Reset */
 •⁠  ⁠{
     margin: 0;
@@ -35,15 +118,15 @@
 }
 
 /* Content Styling (Image Above Text) */
-.content {
+.main-container {
     display: flex;
-    flex-direction: column; /* Image goes above text */
-    align-items: center;
-    gap: 30px; /* Increased gap to provide more space */
-    padding: 20px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: #6d2929;
 }
 
-.content img {
+.main-container  img {
     width: 399px;
     height: 335px;
     border-radius: 10px;
@@ -51,7 +134,7 @@
     flex-shrink: 0;
 }
 
-.content p {
+.main-container  p {
     font-size: 1.2rem;
     color: #1f3d2b;
     max-width: 1000px;
@@ -117,13 +200,12 @@
 
 /* Content Box with Hover Effect */
 .content-box {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #f4e6c1;
+    background-color: #f1e4c2; 
     position: absolute;
     top: 0;
     left: 0;
-    width: 150;
-    height: 270px;
+    width: 320px;
+    height: 250px;
     opacity: 0;
     visibility: hidden;
     display: flex;
@@ -199,6 +281,46 @@
     font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
 }
 
+
+.community-banner {
+  background: #6C292B;
+  color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 2rem auto;
+  max-width: 990px;
+}
+
+.banner-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+	color: #F1E4C2
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+	color: #F1E4C2;
+}
+
+.join-button {
+  background-color: #1f3d2b ;
+  color: #F1E4C2;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 9999px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.join-button:hover {
+  background-color: #F1E4C2;
+  transform: scale(1.05);
+}
 
 /* Footer link hover effect */
 footer a:hover {
