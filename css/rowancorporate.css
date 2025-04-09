@@ -1,0 +1,171 @@
+/* CSS Document */
+/* General Body Styling */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4e6c1;
+  color: #5b2323;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #ad6a42;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+}
+
+.navbar-brand img {
+  height: 50px;
+  margin-left: 10px;
+}
+
+.navbar-nav {
+  gap: 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #f8e9c4;
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #6d2929 !important;
+}
+
+.navbar-nav .home-link {
+  color: #f8e9c4 !important;
+}
+
+.navbar-nav .corporate-bold {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link.subscription-link {
+  color: #6d2929 !important;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: #a36b41;
+  border: none;
+}
+
+.dropdown-menu .dropdown-item {
+  color: white !important;
+  font-size: 16px;
+  padding: 10px 16px;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active {
+  color: #6d2929 !important;
+  background-color: transparent !important;
+}
+
+/* Sidebar Styling */
+.side-menu {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 180px;
+  height: calc(100% - 70px);
+  background-color: #f4e6c1;
+  padding: 20px 15px;
+  z-index: 1000;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.side-menu a {
+  color: #6d2929;
+  text-decoration: none;
+}
+
+.side-menu a:hover {
+  color: #6d2929;
+}
+
+/* Corporate Content Container */
+.corporate-info-container {
+  margin-left: 200px;
+  padding: 30px 40px;
+  width: calc(100% - 200px);
+  box-sizing: border-box;
+  max-width: 1100px;
+}
+
+.corporate-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  position: relative;
+  left: 30px; /* adjust the value as needed */
+}
+
+/* General Info Section */
+.general-info {
+  margin-bottom: 40px;
+}
+
+.general-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.general-info a {
+  color: #5b2323;
+  text-decoration: underline;
+}
+
+/* Content Section Styling */
+.content-section {
+  background-color: #5b2323;
+  color: #f4e6c1;
+  padding: 40px 60px;
+  border-radius: 25px;
+  width: 79vw;
+  max-width: none;
+  margin-left: 1px; /* Aligns with sidebar offset */
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content-section h4 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Light Section Styling (transparent background with red text) */
+.light-section {
+  background-color: transparent;
+  color: #5b2323;
+  border: 2px solid #5b2323;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
