@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
 
+
 /* General Reset */
 •⁠  ⁠{
     margin: 0;
@@ -43,7 +44,7 @@
 }
 
 .content img {
-    width: 300px;
+    width: 399px;
     height: 335px;
     border-radius: 10px;
     object-fit: cover;
@@ -196,4 +197,45 @@
     margin-top: 10px;
     text-align: center;
     font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+}
+
+
+/* Footer link hover effect */
+footer a:hover {
+    opacity: .5;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ad6a42;
+    color: #f4e6c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-family: 'Recoleta', serif;
+    bottom: 0;
+    width: 96%;
+}
+
+/* Text Alignment */
+footer p {
+    font-size: 14px;
+    flex-grow: 1; /* Keeps text aligned left */
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    display: flex;
+    gap: 10px; /* Closer together */
+}
+
+.social-media-icons img {
+    width: 50px; /* Wider images */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
 }
