@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-md navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="images/thegreenroomlogo.png" width="50" class="img-fluid"alt="Breda University of Applied Sciences">
+      <img src="images/thegreenroomlogo.png" width="50" class="img-fluid" alt="Breda University of Applied Sciences">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -51,15 +51,16 @@
   </div>
 </nav>
 
-
+<main>
   <!-- Title -->
   <section class="page-title">
     <h1>Book a <span>Stage</span></h1>
   </section>
 
   <!-- Table Section -->
-  <section class="table-wrapper">
-    <table>
+<section class="table-wrapper container my-5">
+  <div class="table-responsive"> 
+    <table class="table table-bordered table-hover text-center align-middle">
       <thead>
         <tr>
           <th></th>
@@ -74,17 +75,17 @@
       <tbody>
         <tr>
           <td>7:00 AM</td>
-          <td>Registration Opens</td>
-          <td>Registration Opens</td>
-          <td>Registration Opens</td>
-          <td>Registration Opens</td>
-          <td>Registration Opens</td>
-          <td>Registration Opens</td>
+          <td class="clickable colorbgtab" >Registration Opens</td>
+          <td class="clickable" >Registration Opens</td>
+          <td class="clickable" >Registration Opens</td>
+          <td class="clickable" >Registration Opens</td>
+          <td class="clickable" >Registration Opens</td>
+          <td class="clickable" >Registration Opens</td>
         </tr>
         <tr>
           <td>9:00 AM</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td>Add event here</td>
           <td>Add event here</td>
           <td>Add event here</td>
@@ -94,51 +95,53 @@
           <td>11:00 AM</td>
           <td>Add event here</td>
           <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td>Add event here</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td>Add event here</td>
         </tr>
         <tr>
           <td>1:00 PM</td>
           <td></td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td></td>
-          <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td>Add event here</td>
         </tr>
         <tr>
           <td>3:00 PM</td>
           <td></td>
           <td></td>
-          <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td>Add event here</td>
           <td>Add event here</td>
         </tr>
         <tr>
           <td>5:00 PM</td>
+          <td class="clickable" >Add event here</td>
           <td>Add event here</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td></td>
           <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
         </tr>
         <tr>
           <td>7:00 PM</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td></td>
           <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td>Add event here</td>
         </tr>
       </tbody>
     </table>
+  </div>
   </section>
 
+</main>
   <!-- Curtains -->
   <div class="curtain left-curtain">
     <img src="images/curtains.png" alt="Curtain Left">
@@ -162,6 +165,22 @@
             </a>
         </div>
     </footer>
+
+  <script>
+  // Make all clickable cells interactive
+  document.querySelectorAll('.clickable').forEach(cell => {
+    cell.style.cursor = 'pointer';
+    cell.addEventListener('click', () => {
+      const time = cell.parentElement.firstElementChild.textContent;
+      const day = cell.closest('table').querySelectorAll('thead th')[cell.cellIndex].textContent;
+      const currentText = cell.textContent;
+      const newText = prompt(`Booking for ${day} at ${time}:\n(Current: "${currentText}")`, currentText);
+      if (newText !== null) {
+        cell.textContent = newText;
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
