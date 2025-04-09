@@ -238,7 +238,7 @@ header {
 .btn {
     background-color: #1f3d2b !important; /* Green background */
     color: white !important; /* White text */
-    border: 2px solid #f4e6c1 !important; /* Border */
+    border:none !important; /* Border */
     padding: 10px 20px;
     font-size: 1rem;
     border-radius: 5px;
@@ -259,7 +259,7 @@ header {
     margin-left: 0; /* Align the box to the left */
     margin-right: 0; /* Remove any right margin */
     padding: 50px;
-    background-color: rgba(31, 61, 43, 0.7); /* Dark background with transparency */
+    background-color: #1A3325; /* Dark background with transparency */
     border-top-right-radius: 10px; /* Round the top-right corner */
     border-bottom-right-radius: 10px; /* Round the bottom-right corner */
     text-align: left;
@@ -286,7 +286,7 @@ header {
   background-color: #F3ECD8;
   padding: 40px;
   width: 40%;
-  transform: translate(-45%, 9%)
+  transform: translate(-60%, 9%)
   
 }
 
@@ -328,12 +328,12 @@ button {
 }
 
 .right-panel {
-  display: flex;
+  display:flex; 
   justify-content: space-between;
   gap: 20px;
-  width: 60%;
-  padding-left: 40px;
- 
+  width: 100%;
+  align-content: center; 
+  
 }
 
 .card {
@@ -344,6 +344,7 @@ button {
   border-radius: 10px;
   overflow: hidden;
   border: 2px solid #F3ECD8;
+  background-color: #F5ECD6;
 }
 
 .card img {
@@ -356,9 +357,8 @@ button {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: white;
+  color:#103424;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.6);
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 1.1em;
@@ -387,22 +387,22 @@ button {
 
 .events-carousel {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-behavior: smooth;
-  padding: 20px 0;
-  justify-content: center; 
+  scroll-snap-type: x mandatory;
+  width: 320px;
 }
 
 .event-card {
   background: #FAF3E0;
   border: 2px solid #3F2F2F;
-  min-width: 300px;
-  flex-shrink: 0;
   border-radius: 6px;
   overflow: hidden;
   text-align: center;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  width: 100%;
+  max-width: 320px;
 }
 
 .event-card img {
@@ -435,6 +435,43 @@ button {
 .card-info p {
   color: #5A2A2A;
   margin: 0;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #5A2A2A;
+  cursor: pointer;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.events-carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  width: 320px; /* Show one card at a time */
+}
+
+.event-card {
+  background: #FAF3E0;
+  border: 2px solid #3F2F2F;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  min-width: 100%;
+  scroll-snap-align: center;
+  flex-shrink: 0;
 }
 
 .carousel-arrow {
