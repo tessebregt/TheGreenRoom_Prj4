@@ -23,126 +23,53 @@
   <body class="h-100 d-flex flex-column">
 
     <!-- Navigation bar, adapted from https://getbootstrap.com/docs/5.1/components/navbar/ -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="images/thegreenroomlogo.png" width="40" alt="Breda University of Applied Sciences">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="example.html">About Us</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="https://buas-media-interactive.github.io/prj4-guide/" target="_blank">Contact Us</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Corporate Information
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="hero.html">Content</a></li>
-                <li><a class="dropdown-item" href="carousel.html">Marketing</a></li>
-                <li><a class="dropdown-item" href="two-columns.html">Production</a></li>
-                <li><a class="dropdown-item" href="cards.html">Management</a></li>
-              </ul>
-            </li>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="images/thegreenroomlogo.png" width="50" alt="Breda University of Applied Sciences">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link home-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="example.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://buas-media-interactive.github.io/prj4-guide/" target="_blank">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link subscription-bold" href="example.html">Subscriptions</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Corporate Information
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="hero.html">Content</a></li>
+            <li><a class="dropdown-item" href="carousel.html">Marketing</a></li>
+            <li><a class="dropdown-item" href="two-columns.html">Production</a></li>
+            <li><a class="dropdown-item" href="cards.html">Management</a></li>
           </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End of navigation bar -->
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	 <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- End of navigation bar -->
 
     <!-- Start of main placeholder in landing page -->
-	  <html lang="en">
-<head>
+	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage with Video & Buttons</title>
-    <style>
-        /* Video container styling */
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Full-screen height */
-            overflow: hidden;
-        }
-
-        /* Video styling */
-        .video-container video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Text overlay styling */
-        .text-overlay-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 3rem;
-            text-align: center;
-            font-weight: bold;
-            white-space: nowrap;
-            z-index: 1; /* Ensure text is on top */
-        }
-
-        /* Typing effect */
-        .typing-words::after {
-            content: '|';
-            display: inline-block;
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        /* Button container styling */
-        .button-container {
-            position: absolute;
-            top: 70%; /* Adjusted to position under the text */
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Space between buttons */
-            z-index: 1; /* Ensure buttons are above video */
-        }
-
-        /* Button styling */
-        .btn {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            color: white;
-            background-color: #007bff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
+    <title>Homepage with Video and Buttons</title>
+   
 
 <div class="video-container">	   
     <video autoplay muted loop>
@@ -213,19 +140,87 @@
         Welcome ladies and gentlemen to an environment where moments, connections, and personal stories naturally take place, one cup at a time. Step inside, take a seat, and let the story unfold.
     </p>
 </div>
-
-<!-- Description Text Container below the video -->
-<div class="description-container">
-    <p class="description-text">
-        The Green Room is your go-to spot to get together for theater lovers, creatives, and anyone who enjoys a great story.<br><br>
-        By day, we’re a cozy café, perfect for sipping coffee, reading scripts, or sharing ideas with like-minded souls. By night, we transform into a lively theater bar, serving themed cocktails alongside open mic nights, improv shows, cabaret performances, and immersive experiences. There’s always something happening, and you’re always invited.<br><br>
-        Whether you’re here to perform, watch, or simply soak in the atmosphere, The Green Room is a space where creativity thrives, connections spark, and every voice is heard. Plus, with affordable drinks and event tickets, we make sure the arts are for everyone.<br><br>
-        So come in, get comfortable, and let’s make some unforgettable memories together!
-    </p>
-</div>
 	
+	 <div class="container container-fluid">
+    <div class="left-panel container-fluid">
+      <h1>How it <span>Works</span> <span class="emoji">🎭</span></h1>
+      <p>By day, we’re a cozy café serving coffee, breakfast, and lunch, a space to meet, create, or unwind. By night, a lively jazz bar and theatre hub, where music and performance bring people together.</p>
+      <p class="cta">Step inside, take a seat, and let the story unfold!</p>
+      <button>Book an Event</button>
+    </div>
+
+    <div class="right-panel">
+      <div class="card">
+        <img src="images/coffee.jpg" alt="Daytime">
+        <div class="label">Daytime</div>
+      </div>
+      <div class="card">
+        <img src="images/cocktail.jpg" alt="Nighttime">
+        <div class="label">Nighttime</div>
+      </div>
+      <div class="card">
+        <img src="images/theaterseats.png" alt="Events">
+        <div class="label">Events</div>
+      </div>
+    </div>
+  </div>
+	
+	<section class="events-section">
+  <h2>Upcoming <span>Events</span> <span class="ticket-icon">🎟️</span></h2>
+
+  <div class="events-carousel">
+    <!-- Left arrow -->
+    <button class="carousel-arrow left">❮</button>
+
+    <!-- Event cards -->
+    <div class="event-card">
+      <img src="jazz.jpg" alt="Live Jazz Fridays">
+      <div class="card-info">
+        <h3>Live Jazz Fridays</h3>
+        <button class="book-btn">Book</button>
+        <p>Every Friday | 8:00 PM</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="openmic.jpg" alt="Open Mic Night">
+      <div class="card-info">
+        <h3>Open Mic Night</h3>
+        <button class="book-btn">Book</button>
+        <p>April 10th | 7:30 PM</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="romeo.jpg" alt="Romeo & Juliet">
+      <div class="card-info">
+        <h3>Romeo and Juliet: A Modern Twist</h3>
+        <button class="book-btn">Book</button>
+        <p>April 20th | 7:30 PM</p>
+      </div>
+    </div>
+
+    <!-- Right arrow -->
+    <button class="carousel-arrow right">❯</button>
+  </div>
+</section>
 	
     <!-- End of main placeholder -->
+<!-- Footer Section -->
+    <footer>
+        <p>© 2025 All Rights Reserved | Designed by The Green Room</p>
+        <div class="social-media-icons">
+            <a href="https://www.tiktok.com/@green_room_breda" target="_blank">
+                <img src="images/tiktoklogo.png" alt="TikTok Logo">
+            </a>
+            <a href="https://www.facebook.com/people/The-Green-Room/61574366727995/" target="_blank">
+                <img src="images/facebooklogo.png" alt="Facebook Logo">
+            </a>
+            <a href="https://www.instagram.com/green_room_breda/" target="_blank">
+                <img src="images/instalogo.png" alt="Instagram Logo">
+            </a>
+        </div>
+    </footer>
 
   </body>
 </html>

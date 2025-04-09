@@ -7,6 +7,7 @@
 body {
 	font-family: Raleway, sans-serif;
 	background-color: #6d2929;
+
 }
 
 /* Changing the background colour for the header */
@@ -15,23 +16,93 @@ header {
 	background-color: #000060;
 }
 
-/* Changing the background color for the navigation bar */
-
+/* Navbar Styling */
 .navbar {
-	background-color: #f4e6c1;
+    background-color: #ad6a42;
+    padding: 10px; 
+	position: fixed;
+	z-index: 1000;
+	
 }
 
-/* Effect on social media buttons */
-
-footer a:hover {
-	opacity: .5;
+.navbar-brand img {
+    height: 50px;
+    margin-right: 5px; /* Reduced margin to decrease spacing */
 }
 
-/* Corporate navbar */
+.navbar-nav {
+    gap: 10px; /* Ensures equal spacing between all nav items */
+}
 
-#navbar-corporate a.active {
-	color: #800000;
-	font-weight: bold;
+.navbar-nav .nav-link {
+    color: #f8e9c4;
+    font-size: 16px;
+    padding: 10px 12px; /* Adjusted padding for consistent spacing */
+}
+
+/* Always set Subscriptions to color #6d2929 */
+.navbar-nav .subscription-link {
+    color: #6d2929 !important;
+}
+
+/* Hover effect for main navbar links (Home, About Us, Contact Us, Subscriptions, Corporate Info) */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #6d2929 !important;
+}
+
+/* Ensure Home has the same color as other links */
+.navbar-nav .home-link {
+    color: #f8e9c4 !important;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #ad6a42;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #f4e6c1 !important;
+    font-size: 16px;
+    padding: 10px 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover/Active effect for dropdown items */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active {
+    color: #6d2929 !important;
+    background-color: transparent !important;
+}
+
+/* Make Subscriptions bold */
+.navbar-nav .subscription-bold {
+    font-weight: bold;
+}
+
+/* Force Subscriptions link to always be #6d2929 */
+.navbar-nav .nav-link.subscription-link {
+    color: #6d2929 !important;
+}
+	
+/* Hover & Active State */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #e0d3b8;
+}
+
+.dropdown-menu {
+    background-color: #a36b41;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #ad6a42;
 }
 
 /* Hero Section shadow */
@@ -84,62 +155,84 @@ footer a:hover {
 	background-color: #F1E2BF
 }
 
+ /* Video container styling */
+        .video-container {
+            position:relative;
+            width: 100%;
+            height: 100%; /* Full-screen height */
+			min-height: 500px;
+            overflow: hidden;
+        }
 
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
-    gap: 40px; /* Adds space between paragraphs */
-    padding: 40px;
-    max-width: 1500px; /* Adjust width as needed */
-    margin: 0 auto; /* Centers the grid */
-}
-
-.section-title {
-    text-align: center; /* Centers the title */
-    font-size: 2rem; /* Adjust title size */
-    color: #F1E2BF; /* Dark text color */
-    margin-bottom: 20px; /* Space between title and boxes */
-    font-weight: bold;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-}
-
-.grid-item {
-    background-color: #f1e2bf; /* Light gray background */
-    padding: 15px;
-    border-radius: 10px; /* Rounded corners */
-    font-size: 1.1rem;
-	color: #333; /* Text color */
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
-}
-
-.image-grid {
-    display: flex; /* Arranges the boxes in a row */
-    justify-content: space-between; /* Adds space between them */
-    gap: 20px; /* Adjusts spacing between boxes */
-    padding: 20px;
-}
-
-.image-box {
-    background-color: #F1E2BF; /* Light gray background */
-    padding: 15px;
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Centers the text */
-    width: 200px; /* Adjust width as needed */
-}
-
-.image-box img {
-    width: 100%; /* Makes images fit the box */
+        /* Video styling */
+        .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
     height: auto;
-    border-radius: 10px; /* Optional: Rounds corners */
+    object-fit: cover;
+
 }
 
-.image-box p {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 10px; /* Space between image and text */
-}
+        /* Text overlay styling */
+        .text-overlay-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            font-weight: bold;
+            white-space: nowrap;
+            z-index: 1; /* Ensure text is on top */
+        }
 
+        /* Typing effect */
+        .typing-words::after {
+            content: '|';
+            display: inline-block;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Button container styling */
+        .button-container {
+            position: absolute;
+            top: 70%; /* Adjusted to position under the text */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between buttons */
+            z-index: 1; /* Ensure buttons are above video */
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
 
 /* Changing button color */
 .btn {
@@ -158,27 +251,7 @@ footer a:hover {
     background-color: #1A3325 !important; /* Darker green */
     border-color: #F0DDAB !important;
 }
-
-/* Container for the description text */
-.description-container {
-    position: absolute;
-    top: 105%; /* Adjust this to position text exactly where you want */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* You can adjust the width */
-    padding: 20px;
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: translucent background to make the text stand out */
-    border-radius: 8px; /* Optional: rounded corners */
-}
-
-/* Styling for the text inside the description */
-.description-text {
-    font-size: 1.2rem; /* Font size for readability */
-    line-height: 1.6; /* Line height for better spacing */
-    font-family: Arial, sans-serif; /* Font family */
-}
+   
 
 /* Box with text between video and description */
 .box-with-text {
@@ -1726,3 +1799,212 @@ footer a:hover {
     line-height: 1.6;
 }
 
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.left-panel {
+  background-color: #F3ECD8;
+  padding: 40px;
+  width: 40%;
+  transform: translate(-45%, 9%)
+  
+}
+
+.left-panel h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.left-panel h1 span {
+  color: #2E503D;
+  font-weight: bold;
+}
+
+.emoji {
+  font-size: 1.2em;
+  margin-left: 10px;
+}
+
+.left-panel p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.cta {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #A86B4C;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.right-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 60%;
+  padding-left: 40px;
+ 
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  top: 8%;
+  height: 95%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #F3ECD8;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1.1em;
+}
+
+.events-section {
+  background-color: #F3ECD8;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.events-section h2 {
+  font-size: 2.8em;
+  font-weight: 400;
+  color: #5A2A2A;
+  margin-bottom: 40px;
+}
+
+.events-section h2 span {
+  font-weight: bold;
+}
+
+.ticket-icon {
+  font-size: 1.2em;
+}
+
+.events-carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  justify-content: center; 
+}
+
+.event-card {
+  background: #FAF3E0;
+  border: 2px solid #3F2F2F;
+  min-width: 300px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-info {
+  padding: 20px;
+}
+
+.card-info h3 {
+  color: #5A2A2A;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.book-btn {
+  background-color: #2E503D;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.card-info p {
+  color: #5A2A2A;
+  margin: 0;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #5A2A2A;
+  cursor: pointer;
+}
+
+/* Footer link hover effect */
+footer a:hover {
+    opacity: .5;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ad6a42;
+    color: #f4e6c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-family: 'Recoleta', serif;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Text Alignment */
+footer p {
+    font-size: 14px;
+    flex-grow: 1; /* Keeps text aligned left */
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    display: flex;
+    gap: 10px; /* Closer together */
+}
+
+.social-media-icons img {
+    width: 50px; /* Wider images */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+}

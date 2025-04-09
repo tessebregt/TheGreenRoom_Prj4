@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F4E7C8;
+  font-family: Georgia, serif;
+  position: relative;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #ad6a42;
+    padding: 10px 0;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 5px; /* Reduced margin to decrease spacing */
+}
+
+.navbar-nav {
+    gap: 10px; /* Ensures equal spacing between all nav items */
+}
+
+.navbar-nav .nav-link {
+    color: #f8e9c4;
+    font-size: 16px;
+    padding: 10px 12px; /* Adjusted padding for consistent spacing */
+}
+
+/* Always set Subscriptions to color #6d2929 */
+.navbar-nav .contactus-link {
+    color: #6d2929 !important;
+}
+
+/* Hover effect for main navbar links (Home, About Us, Contact Us, Subscriptions, Corporate Info) */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #6d2929 !important;
+}
+
+/* Ensure Home has the same color as other links */
+.navbar-nav .home-link {
+    color: #f8e9c4 !important;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #ad6a42;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #f4e6c1 !important;
+    font-size: 16px;
+    padding: 10px 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover/Active effect for dropdown items */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active {
+    color: #6d2929 !important;
+    background-color: transparent !important;
+}
+
+/* Make Subscriptions bold */
+.navbar-nav .contactus-bold {
+    font-weight: bold;
+}
+
+/* Force Subscriptions link to always be #6d2929 */
+.navbar-nav .nav-link.subscription-link {
+    color: #6d2929 !important;
+}
+    
+/* Hover & Active State */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #e0d3b8;
+}
+
+.dropdown-menu {
+    background-color: #a36b41;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #ad6a42;
+}
+/* End Nav bar*/
+
+
+.nav-links a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Title */
+.page-title {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.page-title h1 {
+  font-size: 38px;
+  color: #1f3d2b;
+}
+
+.page-title h1 span {
+  font-weight: bold;
+  color: #1f3d2b;
+}
+
+/* Table */
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+table {
+  width: 90%;
+  max-width: 1000px;
+  background-color: #F9F7F3;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+  border: 1px solid #ccc;
+}
+
+thead th {
+  background-color: #F9F7F3;
+  font-weight: bold;
+}
+
+/* Curtains basic styling */
+.curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px; /* or whatever fits */
+  z-index: 1; /* Ensure it's below navbar and footer */
+}
+
+/* Make sure navbar and footer are above */
+nav.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+footer {
+  position: relative;
+  z-index: 10;
+}
+
+/* Optional: prevent curtains from pushing or overlapping content */
+.left-curtain {
+  left: 0;
+}
+
+.right-curtain {
+  right: 0;
+    transform: scaleX(-1); /* flips horizontally */
+}
+
+/* If curtain image has large dimensions, make sure it's not overflowing */
+.curtain img {
+  height: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+
+/* Footer link hover effect */
+footer a:hover {
+    opacity: .5;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ad6a42;
+    color: #f4e6c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-family: 'Recoleta', serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Text Alignment */
+footer p {
+    font-size: 14px;
+    flex-grow: 1; /* Keeps text aligned left */
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    display: flex;
+    gap: 10px; /* Closer together */
+}
+
+.social-media-icons img {
+    width: 50px; /* Wider images */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+}
+
