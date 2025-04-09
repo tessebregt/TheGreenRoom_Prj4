@@ -69,6 +69,7 @@
     background-color:#6c292b;
     display: flex;
 	flex-direction: column;
+	color: #f1e4c2; 
     align-items: center;
     height: 100%;
 	padding: 50px;
