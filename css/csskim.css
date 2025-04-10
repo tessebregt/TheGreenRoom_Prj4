@@ -212,6 +212,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+	margin-left: 10px;
     border-radius: 10px;
     transition: opacity 0.3s ease, visibility 0s 0.3s;
 }
@@ -282,46 +283,6 @@
 }
 
 
-.community-banner {
-  background: #6C292B;
-  color: white;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  font-family: 'Segoe UI', sans-serif;
-  margin: 2rem auto;
-  max-width: 990px;
-}
-
-.banner-content h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-	color: #F1E4C2
-}
-
-.banner-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-	color: #F1E4C2;
-}
-
-.join-button {
-  background-color: #1f3d2b ;
-  color: #F1E4C2;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 9999px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.join-button:hover {
-  background-color: #F1E4C2;
-  transform: scale(1.05);
-}
-
 /* Footer link hover effect */
 footer a:hover {
     opacity: .5;
@@ -337,7 +298,7 @@ footer {
     padding: 15px 30px;
     font-family: 'Recoleta', serif;
     bottom: 0;
-    width: 96%;
+    width: 100%;
 }
 
 /* Text Alignment */
