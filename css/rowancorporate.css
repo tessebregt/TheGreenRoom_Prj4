@@ -52,12 +52,12 @@ body {
 
 /* Dropdown Menu */
 .dropdown-menu {
-  background-color: #a36b41;
+  background-color: #ad6a42;
   border: none;
 }
 
 .dropdown-menu .dropdown-item {
-  color: white !important;
+  color: #f8e9c4 !important;
   font-size: 16px;
   padding: 10px 16px;
 }
@@ -76,7 +76,6 @@ body {
   left: 0;
   width: 180px;
   height: calc(100% - 70px);
-  background-color: #f4e6c1;
   padding: 20px 15px;
   z-index: 1000;
 }
@@ -116,7 +115,7 @@ body {
   font-size: 3rem;
   margin-bottom: 40px;
   position: relative;
-  left: 30px; /* adjust the value as needed */
+  left: -1px; /* adjust the value as needed */
 }
 
 /* General Info Section */
@@ -157,6 +156,23 @@ body {
   margin-top: 20px;
 }
 
+.highlight-bold {
+  font-weight: bold;
+}
+
+/* Style Guide Images */
+.style-guide-images {
+  display: flex; /* Align images side by side */
+  gap: 20px; /* Optional: Adds space between the images */
+  justify-content: center; /* Centers the images horizontally */
+}
+
+.style-guide-images img {
+  width: 45%; /* Adjust size as needed */
+   height: 70%; /* Adjust height to make images longer */
+  object-fit: contain; /* Ensures the aspect ratio is maintained */
+}
+
 /* Light Section Styling (transparent background with red text) */
 .light-section {
   background-color: transparent;
@@ -169,3 +185,68 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Footer link hover effect */
+footer a:hover {
+    opacity: .5;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #ad6a42;
+    color: #f4e6c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    font-family: 'Recoleta', serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Text Alignment */
+footer p {
+    font-size: 14px;
+    flex-grow: 1; /* Keeps text aligned left */
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    display: flex;
+    gap: 10px; /* Closer together */
+}
+
+.social-media-icons img {
+    width: 50px; /* Wider images */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+}
+/* Apply Flexbox to Body */
+body {
+  display: flex; /* New */
+  flex-direction: column; /* New */
+  min-height: 100vh; /* New */
+}
+
+/* Main content area */
+.main-content {
+  flex-grow: 1; /* Ensures it takes up available space and pushes footer down */
+}
+
+/* Footer stays at the bottom and is not covered */
+footer {
+  background-color: #ad6a42;
+  color: #f4e6c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  font-family: 'Recoleta', serif;
+  position: relative; /* Changed to relative to maintain flow */
+  width: 100%;
+  margin-top: auto; /* Forces footer to be pushed to the bottom */
+}
