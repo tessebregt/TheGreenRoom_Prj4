@@ -1,6 +1,10 @@
-/* Importing a Google Font */
+/* Changing the main font and background colour */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+body {
+	font-family: Recoleta, serif;
+	background-color: #6d2929;
+
+}
 
 /* Navbar */
 
@@ -94,14 +98,6 @@
     background-color: #ad6a42;
 }
 
-/* Changing the main font and background colour */
-
-body {
-	font-family: Raleway, sans-serif;
-	background-color: #6d2929;
-
-}
-
  /* Video container styling */
         .video-container {
             position:relative;
@@ -137,6 +133,7 @@ body {
             font-weight: bold;
             white-space: nowrap;
             z-index: 1; /* Ensure text is on top */
+			font-family: "Berkshire Swash"
         }
 
         /* Typing effect */
@@ -203,9 +200,7 @@ body {
     color: white;
     font-size: 1.2rem;
     line-height: 1.6;
-}/* Importing a Google Font */
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
+}
 
 /*How It Works*/
 
@@ -217,11 +212,17 @@ body {
 }
 
 .left-panel {
-  background-color: #F3ECD8;
+  background-color: #f4e6c1;
   padding: 40px;
   width: 40%;
   transform: translate(-60%, 9%)
   
+}
+
+.how-it-works-heading {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 2.5rem; /* adjust as needed */
+    color:#133E2A;
 }
 
 .left-panel h1 {
@@ -277,8 +278,8 @@ button {
   height: 95%;
   border-radius: 10px;
   overflow: hidden;
-  border: 2px solid #F3ECD8;
-  background-color: #F5ECD6;
+  border: 2px solid #f4e6c1;
+  background-color: #f4e6c1;
 }
 
 .card img {
@@ -298,10 +299,10 @@ button {
   font-size: 1.1em;
 }
 
-/*Events*/
+/*Upcoming Events*/
 
 .events-section {
-  background-color: #F3ECD8;
+  background-color: #f4e6c1;
   padding: 60px 40px;
   text-align: center;
 }
@@ -309,8 +310,9 @@ button {
 .events-section h2 {
   font-size: 2.8em;
   font-weight: 400;
-  color: #5A2A2A;
+  color: #6d2929;
   margin-bottom: 40px;
+  font-family: 'Berkshire Swash'
 }
 
 .events-section h2 span {
@@ -427,7 +429,6 @@ button {
   border-radius: 1.5rem;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  font-family: 'Segoe UI', sans-serif;
   margin: 2rem auto;
   max-width: 990px;
 }
@@ -435,14 +436,14 @@ button {
 .banner-content h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-	color: #F1E4C2
+  color: #F1E4C2
 }
 
 .banner-content p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   font-style: italic;
-	color: #F1E4C2;
+  color: #F1E4C2;
 }
 
 .join-button {
