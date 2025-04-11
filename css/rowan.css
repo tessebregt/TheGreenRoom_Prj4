@@ -98,30 +98,32 @@ body {
 }
 
 .header h1 {
-    font-size: 36px;
-    color:#6d2929;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px; /* Reduced from 40px to 20px */
+    position: relative;
+    left: -1px;
+    color: #6d2929;
+    font-family: 'Berkshire Swash', cursive; /* Added Berkshire Swash font */
 }
 
 .header p {
     font-size: 18px;
     font-weight: bold;
     color: #1f3d2b;
-}
-/* Subscription Section */
-.subscription-section {
-    text-align: center;
-    margin-top: -10px;
-    margin-right: 20px;
+    margin-top: -10px; /* Optional: pull it up slightly */
 }
 
+/* Subscription Box Styling */
 .subscription-box {
     background-color: #1f3d2b;
     color: #f8e9c4;
-    padding: 40px; /* Adjusted for balance */
+    padding: 45px; /* Adjusted for balance */
     border-radius: 15px;
     text-align: center;
-    width: 80%; /* Wider boxes */
-    margin: 20px;
+    width: 100%; /* Increased width for a wider box */
+    max-width: 600px; /* Maximum width to prevent them from stretching too wide */
+    margin: 30px auto; /* Centers the boxes horizontally */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -189,9 +191,13 @@ body {
     transform: scale(1.1); /* Button slightly enlarges on hover */
 }
 
-/* Footer link hover effect */
-footer a:hover {
-    opacity: .5;
+/* Subscription Section */
+.subscription-section {
+    display: flex;
+    justify-content: center; /* Centers the boxes horizontally */
+    flex-wrap: wrap; /* Allows the boxes to wrap to the next line when space is needed */
+    gap: 50px; /* Adds space between the boxes */
+    margin-bottom: 100px; /* Adds space below the subscription boxes */
 }
 
 /* Footer Styling */
@@ -203,15 +209,10 @@ footer {
     align-items: center;
     padding: 15px 30px;
     font-family: 'Recoleta', serif;
-    position: fixed;
+    position: relative; /* Keeps footer in the flow of the page */
     bottom: 0;
     width: 100%;
-}
-
-/* Text Alignment */
-footer p {
-    font-size: 14px;
-    flex-grow: 1; /* Keeps text aligned left */
+    margin-top: auto; /* Ensures footer stays at the bottom */
 }
 
 /* Social Media Icons */
