@@ -1,16 +1,29 @@
+/* Import Google Font: Berkshire Swash */
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-@import url('https://www.cufonfonts.com/font/recoleta');
 
-body {
-   .berkshire-swash-regular {
-  font-family: "Berkshire Swash", serif;
-  font-weight: 400;
-  font-style: normal;
+/* Custom Font Class */
+.berkshire-swash-regular {
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+/* Font Face for Recoleta – requires self-hosting */
+@font-face {
+    font-family: 'Recoleta';
+    src: url('fonts/Recoleta-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Base Body Styling */
+body {
+    font-family: 'Recoleta', serif;
     background-color: #f4e6c1;
-    color: #3d1d0d;
+    color: #6d2929;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 /* Navbar Styling */
@@ -21,85 +34,62 @@ body {
 
 .navbar-brand img {
     height: 50px;
-    margin-right: 5px; /* Reduced margin to decrease spacing */
+    margin-right: 5px;
 }
 
 .navbar-nav {
-    gap: 10px; /* Ensures equal spacing between all nav items */
+    display: flex;
+    gap: 10px;
 }
 
 .navbar-nav .nav-link {
     color: #f8e9c4;
     font-size: 16px;
-    padding: 10px 12px; /* Adjusted padding for consistent spacing */
+    padding: 10px 12px;
+    text-decoration: none;
 }
 
-/* Always set Subscriptions to color #6d2929 */
-.navbar-nav .contactus-link {
-    color: #6d2929 !important;
-}
-
-/* Hover effect for main navbar links (Home, About Us, Contact Us, Subscriptions, Corporate Info) */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-    color: #6d2929 !important;
+    color: #6d2929;
 }
 
-/* Ensure Home has the same color as other links */
-.navbar-nav .home-link {
-    color: #f8e9c4 !important;
-}
-
-/* Dropdown Menu Styling */
-.dropdown-menu {
-    background-color: #ad6a42;
-    border: none;
-}
-
-.dropdown-menu .dropdown-item {
-    color: #f4e6c1 !important;
-    font-size: 16px;
-    padding: 10px 16px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* Hover/Active effect for dropdown items */
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus,
-.dropdown-menu .dropdown-item:active {
-    color: #6d2929 !important;
-    background-color: transparent !important;
-}
-
-/* Make Subscriptions bold */
-.navbar-nav .contactus-bold {
+.navbar-nav .nav-link.subscription-link,
+.navbar-nav .contactus-link {
+    color: #6d2929;
     font-weight: bold;
 }
 
-/* Force Subscriptions link to always be #6d2929 */
-.navbar-nav .nav-link.subscription-link {
-    color: #6d2929 !important;
+.navbar-nav .home-link {
+    color: #f8e9c4;
 }
-    
-/* Hover & Active State */
-.navbar-nav .nav-link:hover,
+
 .navbar-nav .nav-link.active {
     color: #e0d3b8;
 }
 
+/* Dropdown Menu Styling */
 .dropdown-menu {
     background-color: #a36b41;
+    border: none;
 }
 
-.dropdown-item {
-    color: white;
+.dropdown-menu .dropdown-item {
+    color: #f4e6c1;
+    font-size: 16px;
+    padding: 10px 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    background-color: transparent;
 }
 
-.dropdown-item:hover {
-    background-color: #ad6a42;
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:active {
+    color: #6d2929;
+    background-color: transparent;
 }
-/* End Nav bar*/
 
+/* Contact Section */
 .contact-background {
     display: flex;
     align-items: center;
@@ -108,17 +98,16 @@ body {
     background: #f4e6c1;
 }
 
-  .contact-text {
-    text-align: center; /* Center horizontally */
-    display: flex;
-    justify-content: center; 
-}
-
 .contact-text {
+    text-align: center;
     max-width: 500px;
     margin-right: 50px;
+    display: flex;
+    justify-content: center;
 }
-.contact-form input, .contact-form textarea {
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -126,6 +115,7 @@ body {
     background: #6d2929;
     color: white;
 }
+
 .contact-form button {
     background: #ad6a42;
     border: none;
@@ -134,19 +124,15 @@ body {
     cursor: pointer;
     font-weight: bold;
 }
+
+/* Spotlight Image */
 .spotlight-img {
     width: 300px;
     height: auto;
     border-radius: 10px;
 }
 
-body {
-    font-family: 'Recoleta', serif;
-    background-color: #f4e6c1;
-    color: #6d2929;
-    margin: 0;
-    padding: 0;
-}
+/* Header Styling */
 .header {
     background: linear-gradient(to bottom, #804420, #b87f5e);
     padding: 15px 0;
@@ -155,39 +141,65 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
+/* General Layout */
 .container {
     display: flex;
-    max-width: 1000px;
-    margin: 50px auto;
-    background: #FAF3E0;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: calc(100vh - 110px); /* Adjust based on navbar and footer height */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
 }
+
+/* Image Container */
 .image-container {
     flex: 1;
     background: url('https://example.com/theatre-image.jpg') no-repeat center center/cover;
     border-radius: 10px;
 }
+
+/* Video Container */
+.video-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Form Container */
 .form-container {
     flex: 1;
     padding: 30px;
 }
-h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
 
-}
 .form-group {
     margin-bottom: 15px;
 }
-input, textarea {
+
+.form-container {
+    flex: 1;
+    padding: 60px;
+    background-color: #fef6e4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #6d2929;
     border-radius: 5px;
     background-color: #FDF6E3;
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -198,9 +210,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 button:hover {
-    background: linear-gradient(to bottom, #5A2E1E, #7A4430); /* Adjusted hover gradient */
+    background: linear-gradient(to bottom, #5A2E1E, #7A4430);
 }
+
+/* Responsive Layout */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -208,36 +223,6 @@ button:hover {
     .image-container {
         height: 250px;
     }
-}
-
-
-.container {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.video-container {
-  flex: 1.7; /* more horizontal space */
-  max-width: 65%;
-}
-
-.video-container video {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5; /* slightly wider, less tall */
-  display: block;
-  object-fit: cover; /* keeps the video filling the area nicely */
-}
-
-.form-container {
-  flex: 1;
-}
-
-
-/* Footer link hover effect */
-footer a:hover {
-    opacity: .5;
 }
 
 /* Footer Styling */
@@ -254,20 +239,24 @@ footer {
     width: 100%;
 }
 
-/* Text Alignment */
+
 footer p {
     font-size: 14px;
-    flex-grow: 1; /* Keeps text aligned left */
+    flex-grow: 1;
+}
+
+footer a:hover {
+    opacity: 0.5;
 }
 
 /* Social Media Icons */
 .social-media-icons {
     display: flex;
-    gap: 10px; /* Closer together */
+    gap: 10px;
 }
 
 .social-media-icons img {
-    width: 50px; /* Wider images */
+    width: 50px;
     height: auto;
     transition: transform 0.3s ease;
 }
