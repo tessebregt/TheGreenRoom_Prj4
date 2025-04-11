@@ -179,7 +179,7 @@ body {
         }
 
 
-/* Box with text between video and description */
+/* Box with text between video and How It Works */
 
 .box-with-text {
     width: 70%; /* The width of the box */
@@ -410,14 +410,6 @@ button {
   min-width: 100%;
   scroll-snap-align: center;
   flex-shrink: 0;
-}
-
-.carousel-arrow {
-  background: none;
-  border: none;
-  font-size: 2em;
-  color: #5A2A2A;
-  cursor: pointer;
 }
 
 /*Join Our Community*/
