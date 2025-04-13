@@ -127,7 +127,7 @@ body {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
+            color: #f4e6c1;
             font-size: 3rem;
             text-align: center;
             font-weight: bold;
@@ -167,7 +167,7 @@ body {
             font-size: 1rem;
             text-decoration: none;
 			border-radius: 5px;
-            color: white;
+            color: #f4e6c1;
             background-color: #133E2A;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -175,11 +175,11 @@ body {
 
         .btn:hover {
             background-color: #0C271A;
-			color: white; 
+			color: #f4e6c1; 
         }
 
 
-/* Box with text between video and description */
+/* Box with text between video and How It Works */
 
 .box-with-text {
     width: 70%; /* The width of the box */
@@ -193,45 +193,73 @@ body {
     position: relative;
     left: 0; /* This ensures it starts from the left */
     margin-top: -70px; /* Vertical space above */
-    margin-bottom: 20px; /* Vertical space below */
+}
+
+.ticket-img {
+	position: absolute;
+	width: auto;
+	height: 400px;
+	transform: rotate(-15deg) translate(100%, 40%);
+
+	
+}
+
+@media (max-width: 1000px) {
+	.ticket-img {
+		display: none;
+	}
 }
 
 .box-text {
-    color: white;
+    color: #f4e6c1;
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
 /*How It Works*/
 
+/* Main container */
 .container {
   display: flex;
-  max-width: 1200px;
+  flex-wrap: wrap;
+justify-content: center;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
+  gap: 30px;
+
 }
 
+/* Left panel */
 .left-panel {
-  background-color: #f4e6c1;
-  padding: 40px;
-  width: 40%;
-  transform: translate(-60%, 9%)
-  
+    background-color: #f4e6c1;
+	color: #133E2A; 
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    width: 40%;
+    max-height: 100%;
+/*    overflow: hidden;*/
+    transform: none;
+   
 }
 
+.cont {
+	display: flex
+		
+}
+
+/* Heading styles */
 .how-it-works-heading {
-    font-family: 'Berkshire Swash', cursive;
-    font-size: 2.5rem; /* adjust as needed */
-    color:#133E2A;
-}
-
-.left-panel h1 {
-  font-size: 2.5em;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 2.5rem;
+  color: #133E2A;
   margin-bottom: 20px;
 }
 
 .left-panel h1 span {
-  color: #2E503D;
+  color: #133E2A;
   font-weight: bold;
 }
 
@@ -240,6 +268,7 @@ body {
   margin-left: 10px;
 }
 
+/* Paragraphs */
 .left-panel p {
   font-size: 1.1em;
   line-height: 1.6;
@@ -250,60 +279,91 @@ body {
   margin-top: 20px;
 }
 
-button {
-  margin-top: 20px;
-  background-color: #A86B4C;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
+/* Right panel */
 .right-panel {
-  display:flex; 
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  width: 100%;
-  align-content: center; 
-  
+  width: 70%;
+  align-content: center;
 }
 
+/* Card layout */
 .card {
   position: relative;
   width: 100%;
-  top: 8%;
-  height: 95%;
+  height: auto;
   border-radius: 10px;
   overflow: hidden;
   border: 2px solid #f4e6c1;
   background-color: #f4e6c1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Images */
 .card img {
   width: 100%;
-  height: auto;
+  height: 200px;
   display: block;
+  object-fit: cover;
 }
 
+/* Card label */
 .label {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color:#103424;
+  color: #f4e6c1;
+  background-color: #133E2A;
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 1.1em;
 }
 
+/* Responsive styling */
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .right-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .left-panel {
+    padding: 30px 20px;
+  }
+
+  .how-it-works-heading {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 /*Upcoming Events*/
 
 .events-section {
   background-color: #f4e6c1;
-  padding: 60px 40px;
+/*  padding: 60px 40px;*/
   text-align: center;
 }
 
@@ -361,7 +421,7 @@ button {
 
 .book-btn {
   background-color: #2E503D;
-  color: white;
+  color: #f4e6c1;
   padding: 8px 20px;
   border: none;
   border-radius: 999px;
@@ -410,14 +470,6 @@ button {
   min-width: 100%;
   scroll-snap-align: center;
   flex-shrink: 0;
-}
-
-.carousel-arrow {
-  background: none;
-  border: none;
-  font-size: 2em;
-  color: #5A2A2A;
-  cursor: pointer;
 }
 
 /*Join Our Community*/
@@ -471,17 +523,20 @@ footer {
     background-color: #ad6a42;
     color: #f4e6c1;
     display: flex;
+	align-items: center;
     justify-content: space-between;
-    align-items: center;
     padding: 15px 30px;
     font-family: 'Recoleta', serif;
     bottom: 0;
     width: 100%;
+
+		
 }
 
 footer p {
     font-size: 14px;
     flex-grow: 1; /* Keeps text aligned left */
+	align-content:center;
 }
 
 .social-media-icons {
