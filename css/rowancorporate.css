@@ -237,6 +237,22 @@ body {
   flex-grow: 1; /* Ensures it takes up available space and pushes footer down */
 }
 
+/* Button styling */
+.download-btn {
+  display: inline-block;
+  background-color: #5b2323; /* Deep Red */
+  color: #f4e6c1;
+  font-size: 1.2em;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #ad6a42; /* Warm Brown */
+}
 /* Footer stays at the bottom and is not covered */
 footer {
   background-color: #ad6a42;
