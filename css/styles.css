@@ -127,7 +127,7 @@ body {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
+            color: #f4e6c1;
             font-size: 3rem;
             text-align: center;
             font-weight: bold;
@@ -167,7 +167,7 @@ body {
             font-size: 1rem;
             text-decoration: none;
 			border-radius: 5px;
-            color: white;
+            color: #f4e6c1;
             background-color: #133E2A;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -175,7 +175,7 @@ body {
 
         .btn:hover {
             background-color: #0C271A;
-			color: white; 
+			color: #f4e6c1; 
         }
 
 
@@ -211,12 +211,13 @@ body {
 }
 
 .box-text {
-    color: white;
+    color: #f4e6c1;
     font-size: 1.2rem;
     line-height: 1.6;
 }
 
 /*How It Works*/
+
 /* Main container */
 .container {
   display: flex;
@@ -232,6 +233,7 @@ justify-content: center;
 /* Left panel */
 .left-panel {
     background-color: #f4e6c1;
+	color: #133E2A; 
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
@@ -257,7 +259,7 @@ justify-content: center;
 }
 
 .left-panel h1 span {
-  color: #2E503D;
+  color: #133E2A;
   font-weight: bold;
 }
 
@@ -275,26 +277,6 @@ justify-content: center;
 .cta {
   font-weight: bold;
   margin-top: 20px;
-}
-
-/* Button */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  background-color: #A86B4C;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #8a563a;
 }
 
 /* Right panel */
@@ -336,8 +318,8 @@ justify-content: center;
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: #103424;
-  background-color: rgba(255, 255, 255, 0.7);
+  color: #f4e6c1;
+  background-color: #133E2A;
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 6px;
@@ -439,7 +421,7 @@ justify-content: center;
 
 .book-btn {
   background-color: #2E503D;
-  color: white;
+  color: #f4e6c1;
   padding: 8px 20px;
   border: none;
   border-radius: 999px;
@@ -554,7 +536,7 @@ footer {
 footer p {
     font-size: 14px;
     flex-grow: 1; /* Keeps text aligned left */
-	align-content: center;
+	align-content:center;
 }
 
 .social-media-icons {
