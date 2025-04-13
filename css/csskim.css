@@ -1,3 +1,6 @@
+body {
+	font-family: Recoleta, serif;
+}
 
 
 .navbar {
@@ -113,6 +116,7 @@
     align-items: center;
     overflow: hidden;
     height: 100%; /* Ensures it fills the full container height */
+	font-family: "Berkshire Swash"
 }
 
 /* Content Styling (Image Above Text) */
@@ -137,7 +141,7 @@
     color: #1f3d2b;
     max-width: 1000px;
     min-height: 200px;
-    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-family: Recoleta, serif;
     border-radius: 5px;
     background-color: #F1E2BF;
     display: flex;
@@ -156,6 +160,7 @@
     height: 100%;
 	padding: 50px;
     overflow-y: auto;
+    font-family: "Berkshire Swash"
 }
 
 /* Grid Container for Hover Boxes */
@@ -224,6 +229,7 @@
 .box-text {
     visibility: hidden;
     color: #f4e6c1;
+	font-family: Recoleta, serif;
 }
 
 .grid-item:hover .box-text {
@@ -238,7 +244,7 @@
 	color: #6C292B;
 	padding: 20px;
     font-weight: bold;
-    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-family: "Berkshire Swash";
 	margin: auto;
 	
 }
@@ -274,10 +280,10 @@
 
 .image-box p {
     font-size: 1rem;
-    color: #FFFFFF;
+    color: #f1e4c2;
     margin-top: 10px;
     text-align: center;
-    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    
 }
 
 
