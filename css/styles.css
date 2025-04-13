@@ -195,15 +195,6 @@ body {
     margin-top: -70px; /* Vertical space above */
 }
 
-.ticket-img {
-	position: absolute;
-	width: auto;
-	height: 400px;
-	transform: rotate(-15deg) translate(100%, 40%);
-
-	
-}
-
 @media (max-width: 1000px) {
 	.ticket-img {
 		display: none;
@@ -360,6 +351,15 @@ justify-content: center;
 
 
 /*Upcoming Events*/
+
+.ticket-img {
+	position: absolute;
+	width: auto;
+	height: 400px;
+	transform: rotate(-15deg) translate(100%, 40%);
+
+	
+}
 
 .events-section {
   background-color: #f4e6c1;
