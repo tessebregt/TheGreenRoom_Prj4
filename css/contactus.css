@@ -133,13 +133,17 @@ body {
 }
 
 /* Header Styling */
-.header {
-    background: linear-gradient(to bottom, #804420, #b87f5e);
-    padding: 15px 0;
+
+
+
+.header h1 {
     text-align: center;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 20px; /* Reduced from 40px to 20px */
+    position: relative;
+    left: -1px;
+    color: #6d2929;
+    font-family: 'Berkshire Swash', cursive; /* Added Berkshire Swash font */
 }
 
 /* General Layout */
@@ -185,7 +189,7 @@ body {
 .form-container {
     flex: 1;
     padding: 60px;
-    background-color: #fef6e4;
+    background-color: ##f4e6c1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -225,6 +229,12 @@ button:hover {
     }
 }
 
+
+/* Footer link hover effect */
+footer a:hover {
+    opacity: 0.5;
+}
+
 /* Footer Styling */
 footer {
     background-color: #ad6a42;
@@ -234,29 +244,24 @@ footer {
     align-items: center;
     padding: 15px 30px;
     font-family: 'Recoleta', serif;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-
+/* Text Alignment */
 footer p {
     font-size: 14px;
-    flex-grow: 1;
-}
-
-footer a:hover {
-    opacity: 0.5;
+    flex-grow: 1; /* Keeps text aligned left */
 }
 
 /* Social Media Icons */
 .social-media-icons {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Closer together */
 }
 
 .social-media-icons img {
-    width: 50px;
+    width: 50px; /* Wider images */
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -264,3 +269,51 @@ footer a:hover {
 .social-media-icons img:hover {
     transform: scale(1.1);
 }
+
+
+@media (max-width: 991px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-container img {
+    width: 90%;
+    height: auto;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack the hover boxes */
+  }
+
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .image-box {
+    width: 90%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+
+  .navbar-collapse {
+    background-color: #ad6a42;
+  }
+}
+
