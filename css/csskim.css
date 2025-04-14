@@ -1,3 +1,5 @@
+
+
 body {
 	font-family: Recoleta, serif;
 }
@@ -18,14 +20,14 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: #f8e9c4;
+    color: #f1e4c2 !important;
     font-size: 16px;
     padding: 10px 12px; /* Adjusted padding for consistent spacing */
 }
 
 /* Always set Subscriptions to color #6d2929 */
 .navbar-nav .subscription-link {
-    color: #6d2929 !important;
+    color: #f1e4c2; 
 }
 
 /* Hover effect for main navbar links (Home, About Us, Contact Us, Subscriptions, Corporate Info) */
@@ -34,46 +36,25 @@ body {
     color: #6d2929 !important;
 }
 
+.navbar-nav .subscription-link:hover,
+.navbar-nav .subscription-link:focus {
+    color: #6d2929 !important;
+}
+
 /* Ensure Home has the same color as other links */
 .navbar-nav .home-link {
     color: #f8e9c4 !important;
 }
 
-/* Dropdown Menu Styling */
-.dropdown-menu {
-    background-color: #ad6a42;
-    border: none;
-}
-
-.dropdown-menu .dropdown-item {
-    color: #f4e6c1 !important;
-    font-size: 16px;
-    padding: 10px 16px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-/* Hover/Active effect for dropdown items */
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus,
-.dropdown-menu .dropdown-item:active {
-    color: #6d2929 !important;
-    background-color: transparent !important;
-}
-
-/* Make Subscriptions bold */
-.navbar-nav .subscription-bold {
-    font-weight: bold;
-}
-
 /* Force Subscriptions link to always be #6d2929 */
 .navbar-nav .nav-link.subscription-link {
-    color: #6d2929 !important;
+    color: #f1e4c2 !important;
 }
 	
 /* Hover & Active State */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #e0d3b8;
+    color: #6d2929;
 }
 
 .dropdown-menu {
@@ -134,6 +115,11 @@ body {
     border-radius: 10px;
     object-fit: cover;
     flex-shrink: 0;
+}
+.content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-container  p {
@@ -325,4 +311,51 @@ footer p {
 
 .social-media-icons img:hover {
     transform: scale(1.1);
+}
+
+
+@media (max-width: 991px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-container img {
+    width: 90%;
+    height: auto;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack the hover boxes */
+  }
+
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .image-box {
+    width: 90%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+
+  .navbar-collapse {
+    background-color: #ad6a42;
+  }
 }
