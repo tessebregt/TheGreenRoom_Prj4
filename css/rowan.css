@@ -174,7 +174,7 @@ body {
     font-weight: bold;
     border: none;
     padding: 8px 16px; /* Adjusted padding */
-    border-radius: 20px;
+    border-radius: 5px;
     margin-top: auto; /* Ensures button stays at bottom */
     max-width: 150px; /* Restricts button width */
     width: 100%; /* Ensures button takes up full width until max-width */
