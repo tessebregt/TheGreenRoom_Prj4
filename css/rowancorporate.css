@@ -50,25 +50,6 @@ body {
   color: #6d2929 !important;
 }
 
-/* Dropdown Menu */
-.dropdown-menu {
-  background-color: #ad6a42;
-  border: none;
-}
-
-.dropdown-menu .dropdown-item {
-  color: #f8e9c4 !important;
-  font-size: 16px;
-  padding: 10px 16px;
-}
-
-.dropdown-menu .dropdown-item:hover,
-.dropdown-menu .dropdown-item:focus,
-.dropdown-menu .dropdown-item:active {
-  color: #6d2929 !important;
-  background-color: transparent !important;
-}
-
 /* Sidebar Styling */
 .side-menu {
   position: fixed;
@@ -115,9 +96,10 @@ body {
   font-size: 3rem;
   margin-bottom: 40px;
   position: relative;
-  left: -1px; /* adjust the value as needed */
+  left: -1px;
+  font-family: 'Berkshire Swash', cursive; /* Added this line */
 }
-
+ 
 /* General Info Section */
 .general-info {
   margin-bottom: 40px;
@@ -185,6 +167,83 @@ html {
   scroll-behavior: smooth;
 }
 
+/* General Styling for Social Media Sections */
+.platform-section {
+  background-color: #f4e6c1;
+  color: #5b2323;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+/* Platform Title Styling */
+.platform-section h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Sub-section Headings */
+.sub-section h4 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Text Styling for Each Platform */
+.platform-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Image Grid Styling */
+.image-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Default Image Styling */
+.image-grid img {
+  width: 22%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+/* Full Width Images for Account Banners */
+.full-width-image {
+  width: 100% !important;
+  flex: 0 0 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* Button Styling for CTA */
+.social-media-btn {
+  display: inline-block;
+  background-color: #ad6a42;
+  color: #f4e6c1;
+  font-size: 1em;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-media-btn:hover {
+  background-color: #6d2929;
+}
+
 /* Footer link hover effect */
 footer a:hover {
     opacity: .5;
@@ -235,6 +294,23 @@ body {
 /* Main content area */
 .main-content {
   flex-grow: 1; /* Ensures it takes up available space and pushes footer down */
+}
+
+/* Button styling */
+.download-btn {
+  display: inline-block;
+  background-color: #5b2323; /* Deep Red */
+  color: #f4e6c1;
+  font-size: 1.2em;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #ad6a42; /* Warm Brown */
 }
 
 /* Footer stays at the bottom and is not covered */
