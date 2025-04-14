@@ -157,7 +157,7 @@ body {
             transform: translateX(-50%);
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between buttons */
+            gap: 80px; /* Space between buttons */
             z-index: 1; /* Ensure buttons are above video */
         }
 
@@ -209,6 +209,15 @@ body {
 
 /*How It Works*/
 
+.theatremasks {
+	position: absolute;
+	width: auto;
+	height: 135px;
+	transform: rotate(-15deg) translate(150%, -70%);
+
+	
+}
+
 /* Main container */
 .container {
   display: flex;
@@ -224,7 +233,7 @@ justify-content: center;
 /* Left panel */
 .left-panel {
     background-color: #f4e6c1;
-	color: #133E2A; 
+	color: #6d2929; 
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
@@ -361,6 +370,15 @@ justify-content: center;
 	
 }
 
+.theatrebill {
+	position: absolute;
+	width: auto;
+	height: 95px;
+	transform: translate(240%, -107%);
+
+	
+}
+
 .events-section {
   background-color: #f4e6c1;
 /*  padding: 60px 40px;*/
@@ -379,10 +397,6 @@ justify-content: center;
   font-weight: bold;
 }
 
-.ticket-icon {
-  font-size: 1.2em;
-}
-
 .events-carousel {
   display: flex;
   overflow-x: scroll;
@@ -392,8 +406,8 @@ justify-content: center;
 }
 
 .event-card {
-  background: #FAF3E0;
-  border: 2px solid #3F2F2F;
+  background: #6d2929;
+  border: 2px solid #6d2929;
   border-radius: 6px;
   overflow: hidden;
   text-align: center;
@@ -414,24 +428,29 @@ justify-content: center;
 }
 
 .card-info h3 {
-  color: #5A2A2A;
+  color: #f4e6c1;
   font-size: 1.3em;
   margin-bottom: 10px;
 }
 
 .book-btn {
-  background-color: #2E503D;
-  color: #f4e6c1;
-  padding: 8px 20px;
-  border: none;
-  border-radius: 999px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
+            padding: 10px 20px;
+            font-size: 1rem;
+            text-decoration: none;
+			border-radius: 5px;
+            color: #f4e6c1;
+            background-color: #ad6a42;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background-color: #965C39;
+			color: #f4e6c1; 
+        }
 
 .card-info p {
-  color: #5A2A2A;
+  color: #f4e6c1;
   margin: 0;
 }
 
@@ -439,7 +458,7 @@ justify-content: center;
   background: none;
   border: none;
   font-size: 2em;
-  color: #5A2A2A;
+  color: #6d2929;
   cursor: pointer;
 }
 
@@ -462,8 +481,8 @@ justify-content: center;
 }
 
 .event-card {
-  background: #FAF3E0;
-  border: 2px solid #3F2F2F;
+  background: #6d2929;
+  border: 2px solid #6d2929;
   border-radius: 6px;
   overflow: hidden;
   text-align: center;
@@ -498,20 +517,6 @@ justify-content: center;
   color: #F1E4C2;
 }
 
-.join-button {
-  background-color: #1f3d2b ;
-  color: #F1E4C2;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 9999px;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.join-button:hover {
-  background-color: #F1E4C2;
-  transform: scale(1.05);
-}
 
 /* Footer */
 

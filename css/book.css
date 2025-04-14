@@ -173,6 +173,7 @@ td {
   z-index: 1; /* Ensure it's below navbar and footer */
 }
 
+
 /* Make sure navbar and footer are above */
 nav.navbar {
   position: relative;
@@ -187,12 +188,14 @@ footer {
 /* Optional: prevent curtains from pushing or overlapping content */
 .left-curtain {
   left: 0;
+  transform: scaleX(-1); /* Move right into the screen */
 }
 
 .right-curtain {
   right: 0;
-    transform: scaleX(-1); /* flips horizontally */
 }
+
+
 
 /* If curtain image has large dimensions, make sure it's not overflowing */
 .curtain img {
@@ -200,6 +203,7 @@ footer {
   max-height: 140vh;
   object-fit: cover;
 }
+
 
 
 /* Footer link hover effect */
