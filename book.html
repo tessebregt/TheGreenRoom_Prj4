@@ -8,6 +8,9 @@
   <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Berkshire Swash font -->
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet"> 
+
   <link rel="stylesheet" href="css/book.css">
 </head>
 <body>
@@ -27,18 +30,17 @@
           <a class="nav-link home-link" aria-current="page" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="example.html">About Us</a>
+          <a class="nav-link" href="kimm.html">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link contactus-bold" href="https://buas-media-interactive.github.io/prj4-guide/" target="_blank">Contact Us</a>
+          <a class="nav-link contactus-bold" href="contactus.html" target="_blank">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="example.html">Subscriptions</a>
+          <a class="nav-link" href="rowan.html">Subscriptions</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Corporate Information
-          </a>
+        <li class="nav-item">
+                        <a class="nav-link" href="rowancorporate.html">Corprorate Information</a>
+                    </li>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="hero.html">Content</a></li>
             <li><a class="dropdown-item" href="carousel.html">Marketing</a></li>
@@ -54,7 +56,10 @@
 <main>
   <!-- Title -->
   <section class="page-title">
+    <header class="header" style="padding-top: 80px">
     <h1>Book a <span>Stage</span></h1>
+    <p>Take your place into the spotlight. Do you want to book the stage? Here you can schedule the time and date that suits you!</p>
+  </header>
   </section>
 
   <!-- Table Section -->
@@ -150,6 +155,13 @@
     <img src="images/curtains.png" alt="Right Curtain">
   </div>
 
+<div class="curtains">
+  <div class="left-curtain"><img src="images/curtain.png" alt="Curtain"></div>
+  <div class="right-curtain"><img src="images/curtain.png" alt="Curtain"></div>
+</div>
+
+<button onclick="toggleCurtains()">Toggle Curtains</button>
+
 <!-- Footer Section -->
     <footer>
         <p>© 2025 All Rights Reserved | Designed by The Green Room</p>
@@ -181,6 +193,13 @@
     });
   });
 </script>
+
+<script>
+  function toggleCurtains() {
+    document.querySelector('.curtains').classList.toggle('closed');
+  }
+</script>
+
 
 </body>
 </html>

@@ -122,6 +122,23 @@ body {
   padding-bottom: 100px;
 }
 
+.header h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 20px; /* Reduced from 40px to 20px */
+    position: relative;
+    left: -1px;
+    color: #1f3d2b;
+    font-family: 'Berkshire Swash', cursive; /* Added Berkshire Swash font */
+}
+
+.header p {
+  font-size: 2rem;
+  color: #1f3d2b;
+  font-family: 'Recoleta', serif;
+}
+
+
 table {
   width: 90%;
   max-width: 1000px;
@@ -187,12 +204,15 @@ footer {
 
 /* Optional: prevent curtains from pushing or overlapping content */
 .left-curtain {
+  position: absolute;
   left: 0;
-  transform: scaleX(-1); /* Move right into the screen */
+  transform: scaleX(-1) translateX(80px); /* Move it 20px to the right */
 }
 
 .right-curtain {
+  position: absolute;
   right: 0;
+transform: translateX(80px); /* Move right into the screen */
 }
 
 
@@ -204,11 +224,173 @@ footer {
   object-fit: cover;
 }
 
+.left-curtain,
+.right-curtain {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
 
+.left-curtain {
+  left: 0;
+  transform: scaleX(-1) translateX(0); /* Start open */
+}
+
+.right-curtain {
+  right: 0;
+  transform: translateX(0); /* Start open */
+}
+
+.curtains.closed .left-curtain {
+  transform: scaleX(-1) translateX(150px); /* Move to center */
+}
+
+.curtains.closed .right-curtain {
+  transform: translateX(-150px); /* Move to center */
+}
+
+/* Curtains on sides */
+.curtain {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to right, #8B0000, #5B0000);
+  z-index: 2;
+  animation: openCurtains 3s ease-in-out forwards;
+}
+
+/* Left curtain opens to the left */
+.curtain-left {
+  left: 0;
+  border-right: 2px solid #4a0000;
+  transform-origin: left;
+}
+
+/* Right curtain opens to the right */
+.curtain-right {
+  right: 0;
+  border-left: 2px solid #4a0000;
+  transform-origin: right;
+}
+
+/* Curtain animation (run once) */
+@keyframes openCurtains {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.curtain-right {
+  animation-name: openCurtainsRight;
+}
+
+@keyframes openCurtainsRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Stage content appears after curtains open */
+.stage-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out 2.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/*test 3*/
+.curtain {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  animation: open-curtain 3s ease-in-out forwards;
+}
+
+.curtain.left {
+  left: 0;
+  border-right: 2px solid black;
+}
+
+.curtain.right {
+  right: 0;
+  border-left: 2px solid black;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: gold;
+  z-index: 1;
+  opacity: 0;
+  animation: fade-in 2s ease-in-out 2.5s forwards;
+}
+
+@keyframes open-curtain {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Curtains basic styling */
+.curtain {
+  position: absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  z-index: 2;
+  background: transparent; /* Removed the red background */
+  animation: openCurtains 3s ease-in-out forwards;
+}
+
+/* Left curtain opens to the left */
+.curtain-left {
+  left: 0;
+  transform-origin: left;
+  border: none; /* Removed border */
+}
+
+/* Right curtain opens to the right */
+.curtain-right {
+  right: 0;
+  transform-origin: right;
+  border: none; /* Removed border */
+}
+
+.curtain-right {
+transform: scaleX(-1);}
 
 /* Footer link hover effect */
 footer a:hover {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 /* Footer Styling */
@@ -220,7 +402,6 @@ footer {
     align-items: center;
     padding: 15px 30px;
     font-family: 'Recoleta', serif;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -245,5 +426,52 @@ footer p {
 
 .social-media-icons img:hover {
     transform: scale(1.1);
+}
+
+
+@media (max-width: 991px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-container img {
+    width: 90%;
+    height: auto;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack the hover boxes */
+  }
+
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .image-box {
+    width: 90%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+
+  .navbar-collapse {
+    background-color: #ad6a42;
+  }
 }
 
