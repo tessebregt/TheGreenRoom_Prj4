@@ -8,98 +8,78 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background-color: #ad6a42;
-    padding: 10px 0;
+  background-color: #ad6a42;
+  padding: 10px 0;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-brand img {
-    height: 50px;
-    margin-right: 5px; /* Reduced margin to decrease spacing */
+  height: 50px;
+  margin-right: 5px;
 }
 
 .navbar-nav {
-    gap: 10px; /* Ensures equal spacing between all nav items */
+  gap: 10px;
+  flex-direction: row;
 }
 
 .navbar-nav .nav-link {
-    color: #f8e9c4;
-    font-size: 16px;
-    padding: 10px 12px; /* Adjusted padding for consistent spacing */
+  color: #f8e9c4;
+  font-size: 16px;
+  padding: 10px 12px;
+  transition: color 0.3s ease;
 }
 
-/* Always set Subscriptions to color #6d2929 */
-.navbar-nav .contactus-link {
-    color: #6d2929 !important;
-}
-
-/* Hover effect for main navbar links (Home, About Us, Contact Us, Subscriptions, Corporate Info) */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
-    color: #6d2929 !important;
+  color: #6d2929 !important;
 }
 
-/* Ensure Home has the same color as other links */
+.navbar-nav .nav-link.active {
+  color: #e0d3b8 !important;
+}
+
 .navbar-nav .home-link {
-    color: #f8e9c4 !important;
+  color: #f8e9c4 !important;
 }
 
-/* Dropdown Menu Styling */
+.navbar-nav .contactus-link,
+.navbar-nav .nav-link.subscription-link {
+  color: #6d2929 !important;
+}
+
+.navbar-nav .contactus-bold {
+  font-weight: bold;
+}
+
+/* Dropdown Menu */
 .dropdown-menu {
-    background-color: #ad6a42;
-    border: none;
+  background-color: #a36b41;
+  border: none;
 }
 
 .dropdown-menu .dropdown-item {
-    color: #f4e6c1 !important;
-    font-size: 16px;
-    padding: 10px 16px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+  color: #f4e6c1 !important;
+  font-size: 16px;
+  padding: 10px 16px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Hover/Active effect for dropdown items */
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu .dropdown-item:focus,
 .dropdown-menu .dropdown-item:active {
-    color: #6d2929 !important;
-    background-color: transparent !important;
+  color: #6d2929 !important;
+  background-color: transparent !important;
 }
 
-/* Make Subscriptions bold */
-.navbar-nav .contactus-bold {
-    font-weight: bold;
-}
-
-/* Force Subscriptions link to always be #6d2929 */
-.navbar-nav .nav-link.subscription-link {
-    color: #6d2929 !important;
-}
-    
-/* Hover & Active State */
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #e0d3b8;
-}
-
-.dropdown-menu {
-    background-color: #a36b41;
-}
-
-.dropdown-item {
-    color: white;
-}
-
-.dropdown-item:hover {
-    background-color: #ad6a42;
-}
-/* End Nav bar*/
-
-
+/* Active Link Highlight */
 .nav-links a.active {
   font-weight: bold;
   text-decoration: underline;
 }
 
-/* Title */
+/* Title Section */
 .page-title {
   text-align: center;
   padding: 60px 20px 30px;
@@ -112,7 +92,23 @@ body {
 
 .page-title h1 span {
   font-weight: bold;
+}
+
+/* Header */
+.header h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 20px;
+  position: relative;
+  left: -1px;
   color: #1f3d2b;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.header p {
+  font-size: 2rem;
+  color: #1f3d2b;
+  font-family: 'Recoleta', serif;
 }
 
 /* Table */
@@ -122,31 +118,13 @@ body {
   padding-bottom: 100px;
 }
 
-.header h1 {
-    text-align: center;
-    font-size: 5rem;
-    margin-bottom: 20px; /* Reduced from 40px to 20px */
-    position: relative;
-    left: -1px;
-    color: #1f3d2b;
-    font-family: 'Berkshire Swash', cursive; /* Added Berkshire Swash font */
-}
-
-.header p {
-  font-size: 2rem;
-  color: #1f3d2b;
-  font-family: 'Recoleta', serif;
-}
-
-
 table {
   width: 90%;
   max-width: 1000px;
   background-color: #6d2929 !important;
   border-collapse: collapse;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
 
 th, td {
   text-align: center;
@@ -159,155 +137,73 @@ thead th {
   font-weight: bold;
 }
 
-
-.colorbgtab {
-  background-color: #6d2929;
-}
-
+.colorbgtab,
 td {
   background-color: #6d2929;
 }
 
-
+.table-wrapper table th {
+  background-color: #1f3d2b;
+  color: white;
+}
 
 .clickable:hover {
   background-color: #f0f8ff;
   transition: background-color 0.3s ease;
 }
 
-.table-wrapper table th {
-  background-color: #1f3d2b;
-  color: white; /* Optional: for better contrast */
-}
+/* Curtains */
 
 
-/* Curtains basic styling */
 .curtain {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
-  width: 100px; /* or whatever fits */
-  z-index: 1; /* Ensure it's below navbar and footer */
+  width: 40vw;
+  z-index: 5;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-
-/* Make sure navbar and footer are above */
-nav.navbar {
-  position: relative;
-  z-index: 10;
-}
-
-footer {
-  position: relative;
-  z-index: 10;
-}
-
-/* Optional: prevent curtains from pushing or overlapping content */
 .left-curtain {
-  position: absolute;
   left: 0;
-  transform: scaleX(-1) translateX(80px); /* Move it 20px to the right */
 }
 
 .right-curtain {
-  position: absolute;
   right: 0;
-transform: translateX(80px); /* Move right into the screen */
 }
 
-
-
-/* If curtain image has large dimensions, make sure it's not overflowing */
-.curtain img {
-  height: 120%;
-  max-height: 140vh;
+.left-curtain img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transform: scaleX(-1); /* Flip to face right */
 }
 
-.left-curtain,
-.right-curtain {
-  position: absolute;
-  top: 0;
+.right-curtain img {
+  width: 100%;
   height: 100%;
-  transition: transform 1s ease-in-out;
+  object-fit: cover;
+  transform: none; /* Natural left-facing */
 }
 
-.left-curtain {
-  left: 0;
-  transform: scaleX(-1) translateX(0); /* Start open */
-}
 
-.right-curtain {
-  right: 0;
-  transform: translateX(0); /* Start open */
-}
-
-.curtains.closed .left-curtain {
-  transform: scaleX(-1) translateX(150px); /* Move to center */
-}
-
-.curtains.closed .right-curtain {
-  transform: translateX(-150px); /* Move to center */
-}
-
-/* Curtains on sides */
-.curtain {
-  position: absolute;
-  top: 0;
-  width: 20%;
-  height: 100%;
-  background: linear-gradient(to right, #8B0000, #5B0000);
-  z-index: 2;
-  animation: openCurtains 3s ease-in-out forwards;
-}
-
-/* Left curtain opens to the left */
-.curtain-left {
-  left: 0;
-  border-right: 2px solid #4a0000;
-  transform-origin: left;
-}
-
-/* Right curtain opens to the right */
-.curtain-right {
-  right: 0;
-  border-left: 2px solid #4a0000;
-  transform-origin: right;
-}
-
-/* Curtain animation (run once) */
-@keyframes openCurtains {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.curtain-right {
-  animation-name: openCurtainsRight;
-}
-
-@keyframes openCurtainsRight {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
-/* Stage content appears after curtains open */
-.stage-content {
+/* Stage Content */
+.stage-content,
+.center-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 1;
   transform: translate(-50%, -50%);
   text-align: center;
-  animation: fadeIn 2s ease-in-out 2.5s forwards;
+  z-index: 1;
   opacity: 0;
+  animation: fadeIn 2s ease-in-out 2.5s forwards;
+}
+
+.center-text {
+  font-size: 2rem;
+  color: gold;
 }
 
 @keyframes fadeIn {
@@ -316,81 +212,44 @@ transform: translateX(80px); /* Move right into the screen */
   }
 }
 
-/*test 3*/
-.curtain {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  z-index: 2;
-  animation: open-curtain 3s ease-in-out forwards;
+
+.my-button {
+  display: block;
+  margin: auto;
+  background-color: #1f3d2b;
+  color: white;
 }
 
-.curtain.left {
-  left: 0;
-  border-right: 2px solid black;
+.click-me p {
+  text-align: center;
+  font-size: 1rem;
+  color: #1f3d2b;
+  font-family: 'Recoleta', serif;
 }
 
-.curtain.right {
-  right: 0;
-  border-left: 2px solid black;
+/* Footer */
+footer {
+  background-color: #ad6a42;
+  color: #f4e6c1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  font-family: 'Recoleta', serif;
+  bottom: 0;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
-.center-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: gold;
-  z-index: 1;
-  opacity: 0;
-  animation: fade-in 2s ease-in-out 2.5s forwards;
+footer p {
+  font-size: 14px;
+  flex-grow: 1;
 }
-
-@keyframes open-curtain {
-  to {
-    width: 0;
-  }
-}
-
-@keyframes fade-in {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Curtains basic styling */
-.curtain {
-  position: absolute;
-  top: 0;
-  width: 20%;
-  height: 100%;
-  z-index: 2;
-  background: transparent; /* Removed the red background */
-  animation: openCurtains 3s ease-in-out forwards;
-}
-
-/* Left curtain opens to the left */
-.curtain-left {
-  left: 0;
-  transform-origin: left;
-  border: none; /* Removed border */
-}
-
-/* Right curtain opens to the right */
-.curtain-right {
-  right: 0;
-  transform-origin: right;
-  border: none; /* Removed border */
-}
-
-.curtain-right {
-transform: scaleX(-1);}
 
 /* Footer link hover effect */
 footer a:hover {
-    opacity: 0.5;
+    opacity: .5;
 }
 
 /* Footer Styling */
@@ -474,4 +333,3 @@ footer p {
     background-color: #ad6a42;
   }
 }
-
