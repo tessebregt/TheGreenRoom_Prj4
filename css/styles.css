@@ -494,6 +494,12 @@ justify-content: center;
 
 /*Join Our Community*/
 
+.community-section {
+  background-color: #f4e6c1;
+/*  padding: 60px 40px;*/
+  text-align: center;
+}
+
 .community-banner {
   background: #6C292B;
   color: #f4e6c1; 
@@ -508,7 +514,8 @@ justify-content: center;
 .banner-content h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #F1E4C2
+  color: #F1E4C2;
+  font-family: 'Berkshire Swash';
 }
 
 .banner-content p {
