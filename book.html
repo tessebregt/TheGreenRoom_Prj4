@@ -33,7 +33,7 @@
           <a class="nav-link" href="kimm.html">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link contactus-bold" href="contactus.html" target="_blank">Contact Us</a>
+          <a class="nav-link" href="contactus.html" target="_blank">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="rowan.html">Subscriptions</a>
@@ -58,9 +58,16 @@
   <section class="page-title">
     <header class="header" style="padding-top: 80px">
     <h1>Book a <span>Stage</span></h1>
-    <p>Take your place into the spotlight. Do you want to book the stage? Here you can schedule the time and date that suits you!</p>
+    <p>Take your place into the spotlight!</p> <p>Do you want to book the stage? Here you can schedule the time and date that suits you!</p>
   </header>
   </section>
+
+  <button class="my-button" onclick="toggleCurtains()">Open Curtains</button>
+<div class="click-me">
+  <p><b>Click this button up here to move the curtains!!</b></p>
+</div>
+
+
 
   <!-- Table Section -->
 <section class="table-wrapper container my-5">
@@ -155,12 +162,9 @@
     <img src="images/curtains.png" alt="Right Curtain">
   </div>
 
-<div class="curtains">
-  <div class="left-curtain"><img src="images/curtain.png" alt="Curtain"></div>
-  <div class="right-curtain"><img src="images/curtain.png" alt="Curtain"></div>
-</div>
 
-<button onclick="toggleCurtains()">Toggle Curtains</button>
+
+
 
 <!-- Footer Section -->
     <footer>
@@ -190,15 +194,28 @@
       if (newText !== null) {
         cell.textContent = newText;
       }
-    });
-  });
 </script>
 
 <script>
-  function toggleCurtains() {
-    document.querySelector('.curtains').classList.toggle('closed');
-  }
+function toggleCurtains() {
+  document.querySelector('.left-curtain').classList.toggle('open');
+  document.querySelector('.right-curtain').classList.toggle('open');
+}
 </script>
+
+<style>
+.left-curtain.open {
+  transform: translateX(-100%);
+  transition: transform 1.5s ease;
+  transform: translateX(-30%); /* opens but stays on screen */
+}
+
+.right-curtain.open {
+  transform: translateX(100%);
+  transition: transform 1.5s ease;
+  transform: translateX(30%); /* opens but stays on screen */
+}
+</style>
 
 
 </body>
