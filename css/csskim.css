@@ -28,6 +28,7 @@ body {
 /* Always set Subscriptions to color #6d2929 */
 .navbar-nav .subscription-link {
     color: #f1e4c2; 
+	
 }
 
 /* Hover effect for main navbar links (Home, About Us, Contact Us, Subscriptions, Corporate Info) */
