@@ -371,6 +371,14 @@ body {
 	
 }
 
+.ticket-img2 {
+	position: absolute;
+	width: auto;
+	height: 400px;
+	transform: rotate(15deg) translate(-100%, 40%) scaleX(-1);
+	pointer-events: none;
+}
+
 .theatrebill {
 	position: absolute;
 	width: auto;
