@@ -248,7 +248,54 @@ footer {
   }
 
   .grid-container {
-    grid-template-columns: 1fr; /* Stack the hover boxes */
+    grid-template-columns: "1fr"; /* Stack the hover boxes */
+  }
+
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .image-box {
+    width: 90%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px;
+  }
+
+  .navbar-collapse {
+    background-color: #ad6a42;
+  }
+}
+/* ========== RESPONSIVE STYLES ========== */
+
+@media (max-width: 991px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-container img {
+    width: 90%;
+    height: auto;
+  }
+
+  .grid-container {
+    grid-template-columns: "1fr"; /* Stack the hover boxes */
   }
 
   .image-grid {
