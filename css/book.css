@@ -1,8 +1,26 @@
+/* Import Google Font: Berkshire Swash */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+/* Custom Font Class */
+.berkshire-swash-regular {
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Font Face for Recoleta – requires self-hosting */
+@font-face {
+    font-family: 'Recoleta';
+    src: url('fonts/Recoleta-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #F4E7C8;
-  font-family: Georgia, serif;
+  font-family: Recoleta, serif;
   position: relative;
 }
 
@@ -124,7 +142,6 @@ body {
 
 
 table {
-  width: 90%;
   max-width: 1000px;
   border-collapse: collapse;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -358,7 +375,9 @@ footer p {
 
   .navbar-collapse {
     background-color: #ad6a42;
-  }@media (max-width: 768px) {
+  }
+
+  @media (max-width: 768px) {
   .curtain img {
     transform: scale(0.8);
   }
