@@ -63,7 +63,6 @@ body {
   height: calc(100% - 70px); /* or 100% depending on your layout */
   padding: 20px 15px;
   z-index: 10; /* lower than navbar */
-  background-color: #f8e9c4; /* optional for visibility */
 }
 
 .side-menu ul {
