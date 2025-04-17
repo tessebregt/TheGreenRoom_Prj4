@@ -4,7 +4,7 @@
 body {
   font-family: 'Recoleta', serif;
   background-color: #f4e6c1;
-  color: #5b2323;
+  color: #6d2929;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -83,7 +83,7 @@ body {
 }
 
 .side-menu a:hover {
-  color: #6d2929;
+  color: #ad6a42;
 }
 
 /* Corporate Content Container */
@@ -116,13 +116,13 @@ body {
 }
 
 .general-info a {
-  color: #5b2323;
+  color: #6d2929;
   text-decoration: underline;
 }
 
 /* Content Section Styling */
 .content-section {
-  background-color: #5b2323;
+  background-color: #6d2929;
   color: #f4e6c1;
   padding: 40px 60px;
   border-radius: 25px;
@@ -160,17 +160,52 @@ body {
   object-fit: contain;
 }
 
+/* Table Styling */
+.content-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.content-section th,
+.content-section td {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.content-section thead th {
+  background-color: #ad6a42; /* Dark green */
+  color: #f4e6c1;
+}
+
+.content-section tbody tr:nth-child(even) {
+  background-color: #f4e6c1; 
+}
+
+.content-section tbody tr:hover {
+  background-color: #f4e6c1; 
+}
+
+.content-section table a {
+  color: #6d2929;
+  text-decoration: none;
+}
+
+.content-section table a:hover {
+  text-decoration: underline;
+}
+
 /* Light Section Styling */
 .light-section {
   background-color: transparent;
-  color: #5b2323;
-  border: 2px solid #5b2323;
+  color: #6d2929;
+  border: 2px solid #6d2929;
 }
 
 /* Platform Section */
 .platform-section {
   background-color: #f4e6c1;
-  color: #5b2323;
+  color: #6d2929;
   padding: 30px;
   border-radius: 15px;
   margin-bottom: 30px;
@@ -289,7 +324,7 @@ footer p {
 }
 
 .download-btn:hover {
-  background-color: #935a38;
+  background-color:#ad6a42;
   color: #f4e6c1;
   transform: translateY(-2px);
   box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
