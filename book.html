@@ -19,7 +19,7 @@
 <nav class="navbar navbar-expand-md navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="images/thegreenroomlogo.png" width="50" class="img-fluid" alt="Breda University of Applied Sciences">
+      <img src="images/book/thegreenroomlogo copy.png" width="50" class="img-fluid" alt="Breda University of Applied Sciences">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -98,19 +98,19 @@
           <td>9:00 AM</td>
           <td class="clickable" >Add event here</td>
           <td class="clickable" >Add event here</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
         </tr>
         <tr>
           <td>11:00 AM</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
           <td class="clickable" >Add event here</td>
-          <td>Add event here</td>
           <td class="clickable" >Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
         </tr>
         <tr>
           <td>1:00 PM</td>
@@ -119,7 +119,7 @@
           <td></td>
           <td class="clickable" >Add event here</td>
           <td class="clickable" >Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
         </tr>
         <tr>
           <td>3:00 PM</td>
@@ -127,16 +127,16 @@
           <td></td>
           <td class="clickable" >Add event here</td>
           <td class="clickable" >Add event here</td>
-          <td>Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
         </tr>
         <tr>
           <td>5:00 PM</td>
           <td class="clickable" >Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td class="clickable" >Add event here</td>
           <td></td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
           <td class="clickable" >Add event here</td>
         </tr>
         <tr>
@@ -144,9 +144,9 @@
           <td class="clickable" >Add event here</td>
           <td class="clickable" >Add event here</td>
           <td></td>
-          <td>Add event here</td>
           <td class="clickable" >Add event here</td>
-          <td>Add event here</td>
+          <td class="clickable" >Add event here</td>
+          <td class="clickable" >Add event here</td>
         </tr>
       </tbody>
     </table>
@@ -156,10 +156,10 @@
 </main>
   <!-- Curtains -->
   <div class="curtain left-curtain">
-    <img src="images/curtains.png" alt="Left Curtain">
+    <img src="images/book/curtains.png" alt="Left Curtain">
   </div>
   <div class="curtain right-curtain">
-    <img src="images/curtains.png" alt="Right Curtain">
+    <img src="images/book/curtains.png" alt="Right Curtain">
   </div>
 
 
@@ -171,18 +171,25 @@
         <p>© 2025 All Rights Reserved | Designed by The Green Room</p>
         <div class="social-media-icons">
             <a href="https://www.tiktok.com/@green_room_breda" target="_blank">
-                <img src="images/tiktoklogo.png" alt="TikTok Logo">
+                <img src="images/book/tiktoklogo copy.png" alt="TikTok Logo">
             </a>
             <a href="https://www.facebook.com/people/The-Green-Room/61574366727995/" target="_blank">
-                <img src="images/facebooklogo.png" alt="Facebook Logo">
+                <img src="images/book/facebooklogo copy.png" alt="Facebook Logo">
             </a>
             <a href="https://www.instagram.com/green_room_breda/" target="_blank">
-                <img src="images/instalogo.png" alt="Instagram Logo">
+                <img src="images/book/instalogo copy.png" alt="Instagram Logo">
             </a>
         </div>
     </footer>
 
-  <script>
+<script>
+function toggleCurtains() {
+  document.querySelector('.left-curtain').classList.toggle('open');
+  document.querySelector('.right-curtain').classList.toggle('open');
+}
+</script>
+
+ <script>
   // Make all clickable cells interactive
   document.querySelectorAll('.clickable').forEach(cell => {
     cell.style.cursor = 'pointer';
@@ -194,14 +201,10 @@
       if (newText !== null) {
         cell.textContent = newText;
       }
+    }); // <-- this closing brace was missing
+  }); // <-- this closing brace was also missing
 </script>
 
-<script>
-function toggleCurtains() {
-  document.querySelector('.left-curtain').classList.toggle('open');
-  document.querySelector('.right-curtain').classList.toggle('open');
-}
-</script>
 
 <style>
 .left-curtain.open {
