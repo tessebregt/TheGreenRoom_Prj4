@@ -88,6 +88,7 @@ body {
 .page-title h1 {
   font-size: 38px;
   color: #1f3d2b;
+  font-size: clamp(24px, 4vw, 38px)
 }
 
 .page-title h1 span {
@@ -103,6 +104,7 @@ body {
   left: -1px;
   color: #1f3d2b;
   font-family: 'Berkshire Swash', cursive;
+  font-size: clamp(24px, 4vw, 38px)
 }
 
 .header p {
@@ -117,20 +119,24 @@ body {
   display: flex;
   justify-content: center;
   padding-bottom: 100px;
+    padding: 0 15px 100px;
 }
+
 
 table {
   width: 90%;
   max-width: 1000px;
-  background-color: #6d2929 !important;
   border-collapse: collapse;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  max-width: none; /* Let it be fluid */
+  overflow-x: auto;
 }
 
 th, td {
   text-align: center;
   padding: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Soft brown/orange for example */
 }
 
 thead th {
@@ -138,14 +144,14 @@ thead th {
   font-weight: bold;
 }
 
-.colorbgtab,
-td {
-  background-color: #6d2929;
-}
-
 .table-wrapper table th {
   background-color: #1f3d2b;
-  color: white;
+  color: #f4e6c1;
+}
+
+.table-wrapper table td {
+  background-color: #fdf9ee;
+  color: #1f3d2b;
 }
 
 .clickable:hover {
@@ -153,11 +159,15 @@ td {
   transition: background-color 0.3s ease;
 }
 
+.table-wrapper .table.table-bordered > :not(caption) > * > * {
+  border: 1px solid #f8e9c4 !important;
+}
+
 /* Curtains */
 
 
 .curtain {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   width: 40vw;
@@ -173,6 +183,8 @@ td {
 .right-curtain {
   right: 0;
 }
+
+
 
 .left-curtain img {
   width: 100%;
@@ -205,6 +217,7 @@ td {
 .center-text {
   font-size: 2rem;
   color: gold;
+  font-size: clamp(24px, 4vw, 38px)
 }
 
 @keyframes fadeIn {
@@ -218,7 +231,7 @@ td {
   display: block;
   margin: auto;
   background-color: #1f3d2b;
-  color: white;
+  color: #f4e6c1;
   width: 15%;
     padding: 10px;
     border: none;
@@ -305,6 +318,8 @@ footer p {
     flex-direction: column;
   }
 
+
+
   .left-section,
   .right-section {
     width: 100%;
@@ -343,5 +358,29 @@ footer p {
 
   .navbar-collapse {
     background-color: #ad6a42;
+  }@media (max-width: 768px) {
+  .curtain img {
+    transform: scale(0.8);
   }
+}
+
+@media (max-width: 768px) {
+  .curtain {
+    width: 15vw;
+    max-width: 100px;
+  }
+
+  .stage-content,
+  .center-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .curtain {
+    display: none; /* Or hide if space is too tight */
+  }
+}
+
+
 }
