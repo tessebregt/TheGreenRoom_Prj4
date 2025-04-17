@@ -12,6 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet"> 
 
   <link rel="stylesheet" href="css/book.css">
+
+  <style>
+.left-curtain.open {
+  transition: transform 1.5s ease;
+  transform: translateX(-30%); /* opens but stays on screen */
+}
+
+.right-curtain.open {
+  transition: transform 1.5s ease;
+  transform: translateX(30%); /* opens but stays on screen */
+}
+</style>
+
 </head>
 <body>
 
@@ -51,7 +64,6 @@
   </ul>
 </li>
 
-        </li>
       </ul>
     </div>
   </div>
@@ -78,8 +90,8 @@
 
 
   <!-- Table Section -->
-  <div>
 <section class="table-wrapper container my-5">
+
   <div class="table-responsive"> 
     <table class="table table-bordered table-hover text-center align-middle">
       <thead>
@@ -160,7 +172,6 @@
       </tbody>
     </table>
   </div>
-</div>
   </section>
 
 </main>
@@ -216,17 +227,5 @@ function toggleCurtains() {
 
 
 </body>
-
-<style>
-.left-curtain.open {
-  transition: transform 1.5s ease;
-  transform: translateX(-30%); /* opens but stays on screen */
-}
-
-.right-curtain.open {
-  transition: transform 1.5s ease;
-  transform: translateX(30%); /* opens but stays on screen */
-}
-</style>
 
 </html>
