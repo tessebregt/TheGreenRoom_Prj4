@@ -17,10 +17,10 @@
 <body>
 
       <!-- Navigation bar, adapted from https://getbootstrap.com/docs/5.1/components/navbar/ -->
-<nav class="navbar navbar-expand-md navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="images/contactus/thegreenroomlogo copy.png" width="50" class="img-fluid"alt="Breda University of Applied Sciences">
+      <img src="images/contactus/thegreenroomlogocopy.png" width="50" class="img-fluid" alt="Breda University of Applied Sciences">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -39,16 +39,19 @@
         <li class="nav-item">
           <a class="nav-link" href="rowan.html">Subscriptions</a>
         </li>
-        <li class="nav-item">
-                        <a class="nav-link" href="rowancorporate.html">Corprorate Information</a>
-                    </li>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="hero.html">Content</a></li>
-            <li><a class="dropdown-item" href="carousel.html">Marketing</a></li>
-            <li><a class="dropdown-item" href="two-columns.html">Production</a></li>
-            <li><a class="dropdown-item" href="cards.html">Management</a></li>
-          </ul>
-        </li>
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Corporate Info
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li><a class="dropdown-item" href="rowancorporate.html">Overview</a></li>
+    <li><a class="dropdown-item" href="hero.html">Content</a></li>
+    <li><a class="dropdown-item" href="carousel.html">Marketing</a></li>
+    <li><a class="dropdown-item" href="two-columns.html">Production</a></li>
+    <li><a class="dropdown-item" href="cards.html">Management</a></li>
+  </ul>
+</li>
+
       </ul>
     </div>
   </div>
@@ -61,7 +64,7 @@
     
     <div class="container">
         <div class="video-container">      
-    <video autoplay muted loop width="100%">
+    <video autoplay muted loop width="width: 100%">
         <source src="images/contactus/contactus.mp4" type="video/mp4">
     </video>
 </div>
@@ -71,7 +74,7 @@
             <h1>Get in <strong>Touch!</strong></h1> 
             <p><b>Whether you have a question, an idea, or just want to chat, we’re all ears. Reach out, and we’ll make sure the spotlight is on you!</b></p>
         </header>
-            <form>
+            <form action="#" method="POST">
                 <div class="form-group">
                     <input type="text" placeholder="First name" required>
                 </div>
@@ -90,21 +93,24 @@
     <footer>
         <div class="footer-video-container">
     <video autoplay muted loop playsinline>
-      <source src="your-video.mp4" type="video/mp4" />
+      <source src="your-video.mp4" type="video/mp4">
     </video>
-  </div class="footer-content">
+  <div class="footer-content">
+  </div>
+</div>
         <p>© 2025 All Rights Reserved | Designed by The Green Room</p>
         <div class="social-media-icons">
             <a href="https://www.tiktok.com/@green_room_breda" target="_blank">
-                <img src="images/contactus/tiktoklogo copy.png" alt="TikTok Logo">
+                <img src="images/contactus/tiktoklogocopy.png" alt="TikTok Logo">
             </a>
             <a href="https://www.facebook.com/people/The-Green-Room/61574366727995/" target="_blank">
-                <img src="images/contactus/facebooklogo copy.png" alt="Facebook Logo">
+                <img src="images/contactus/facebooklogocopy.png" alt="Facebook Logo">
             </a>
             <a href="https://www.instagram.com/green_room_breda/" target="_blank">
-                <img src="images/contactus/instalogo copy.png" alt="Instagram Logo">
+                <img src="images/contactus/instalogocopy.png" alt="Instagram Logo">
             </a>
         </div>
+
     </footer>
 
 
