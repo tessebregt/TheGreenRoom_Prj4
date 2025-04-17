@@ -54,15 +54,16 @@ body {
   color: #6d2929 !important;
 }
 
-/* Sidebar Styling */
+/* Side Bar Styling */
 .side-menu {
   position: fixed;
-  top: 100px;
+  top: 100px; /* distance from top */
   left: 0;
   width: 180px;
-  height: calc(100% - 70px);
+  height: calc(100% - 70px); /* or 100% depending on your layout */
   padding: 20px 15px;
-  z-index: 1000;
+  z-index: 10; /* lower than navbar */
+  background-color: #f8e9c4; /* optional for visibility */
 }
 
 .side-menu ul {
