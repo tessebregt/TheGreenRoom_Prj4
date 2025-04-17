@@ -180,14 +180,13 @@ thead th {
   border: 1px solid #f8e9c4 !important;
 }
 
+
 /* Curtains */
-
-
 .curtain {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 40vw;
+  width: 30vw;
   z-index: 5;
   pointer-events: none;
   overflow: hidden;
@@ -200,8 +199,6 @@ thead th {
 .right-curtain {
   right: 0;
 }
-
-
 
 .left-curtain img {
   width: 100%;
