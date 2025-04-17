@@ -332,7 +332,7 @@ footer p {
   }
 
   .grid-container {
-    grid-template-columns: 1fr; /* Stack the hover boxes */
+    grid-template-columns: 1fr 1fr; /* Stack the hover boxes */
   }
 
   .image-grid {
@@ -358,5 +358,5 @@ footer p {
 
   .navbar-collapse {
     background-color: #ad6a42;
-  }
+  } 
 }
