@@ -44,6 +44,8 @@ body > .container {
 .navbar {
     background-color: #ad6a42;
     padding: 10px 0;
+    position: relative; /* add this */
+    z-index: 10;         /* add this */
 }
 
 .navbar-brand img {
@@ -73,7 +75,15 @@ body > .container {
     color: #6d2929;
     font-weight: bold;
 }
+.navbar-brand img {
+  height: 50px;
+  margin-right: 5px;
+}
 
+.navbar-nav {
+  gap: 10px;
+  flex-direction: row;
+}
 /* Make Subscriptions bold */
 .navbar-nav .contactus-bold {
     font-weight: bold;
@@ -85,7 +95,7 @@ body > .container {
 
 .navbar-nav .nav-link.active {
     color: #e0d3b8;
-}
+} 
 
 /* Dropdown Menu Styling */
 .dropdown-menu {
@@ -390,5 +400,4 @@ footer {
         height: auto;
     }
 }
-
 
