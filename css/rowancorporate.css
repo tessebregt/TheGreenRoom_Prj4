@@ -1,4 +1,5 @@
 /* CSS Document */
+
 /* General Body Styling */
 body {
   font-family: 'Recoleta', serif;
@@ -7,6 +8,9 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Navbar Styling */
@@ -98,9 +102,9 @@ body {
   margin-bottom: 40px;
   position: relative;
   left: -1px;
-  font-family: 'Berkshire Swash', cursive; /* Added this line */
+  font-family: 'Berkshire Swash', cursive;
 }
- 
+
 /* General Info Section */
 .general-info {
   margin-bottom: 40px;
@@ -124,7 +128,7 @@ body {
   border-radius: 25px;
   width: 79vw;
   max-width: none;
-  margin-left: 1px; /* Aligns with sidebar offset */
+  margin-left: 1px;
   margin-bottom: 40px;
   box-sizing: border-box;
 }
@@ -145,30 +149,25 @@ body {
 
 /* Style Guide Images */
 .style-guide-images {
-  display: flex; /* Align images side by side */
-  gap: 20px; /* Optional: Adds space between the images */
-  justify-content: center; /* Centers the images horizontally */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .style-guide-images img {
-  width: 45%; /* Adjust size as needed */
-  height: 70%; /* Adjust height to make images longer */
-  object-fit: contain; /* Ensures the aspect ratio is maintained */
+  width: 45%;
+  height: 70%;
+  object-fit: contain;
 }
 
-/* Light Section Styling (transparent background with red text) */
+/* Light Section Styling */
 .light-section {
   background-color: transparent;
   color: #5b2323;
   border: 2px solid #5b2323;
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* General Styling for Social Media Sections */
+/* Platform Section */
 .platform-section {
   background-color: #f4e6c1;
   color: #5b2323;
@@ -181,56 +180,45 @@ html {
   overflow: hidden;
 }
 
-/* Platform Title Styling */
 .platform-section h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Sub-section Headings */
 .sub-section h4 {
   font-size: 1.5rem;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-/* Platform Title Styling */
-.platform-section h3 {
-  font-size: 1.5rem; /* Adjust this value to make it smaller */
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Text Styling for Each Platform */
 .platform-section p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
-/* Container for images in a row */
+/* Image Grid */
 .image-grid {
-  display: flex; /* Align images horizontally */
-  gap: 20px; /* Adds space between the images */
-  justify-content: center; /* Optional: centers images horizontally */
-  flex-wrap: wrap; /* Allows the images to wrap onto a new line if needed */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Styling for individual images */
 .image-grid img {
-  width: 300px; /* Set width */
-  height: auto; /* Let height adjust to maintain aspect ratio */
-  object-fit: contain; /* Ensure images are resized properly */
+  width: 300px;
+  height: auto;
+  object-fit: contain;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out; /* Adds smooth hover effect */
+  transition: transform 0.3s ease-in-out;
 }
 
 .image-grid img:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05);
 }
 
-/* Button Styling for CTA */
+/* CTA Button */
 .social-media-btn {
   display: inline-block;
   background-color: #ad6a42;
@@ -247,94 +235,7 @@ html {
   background-color: #6d2929;
 }
 
-/* Footer link hover effect */
-footer a:hover {
-    opacity: .5;
-}
-
 /* Footer Styling */
-footer {
-    background-color: #ad6a42;
-    color: #f4e6c1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    font-family: 'Recoleta', serif;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Text Alignment */
-footer p {
-    font-size: 14px;
-    flex-grow: 1; /* Keeps text aligned left */
-}
-
-/* Social Media Icons */
-.social-media-icons {
-    display: flex;
-    gap: 10px; /* Closer together */
-}
-
-.social-media-icons img {
-    width: 50px; /* Wider images */
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.social-media-icons img:hover {
-    transform: scale(1.1);
-}
-
-/* Apply Flexbox to Body */
-body {
-  display: flex; /* New */
-  flex-direction: column; /* New */
-  min-height: 100vh; /* New */
-}
-
-/* Main content area */
-.main-content {
-  flex-grow: 1; /* Ensures it takes up available space and pushes footer down */
-}
-
-/* Button styling */
-.download-btn {
-  display: inline-block;
-  background-color: #5b2323; /* Deep Red */
-  color: #f4e6c1;
-  font-size: 1.2em;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  transition: background-color 0.3s;
-}
-
-.btn-appendix:hover {
-    transform: scale(1.1); /* Increase size by 10% on hover */
-}
-
-.btn-appendix {
-    background-color:#ad6a42; /* Green background */
-    color: #f4e6c1; /* White text */
-    border: none; /* No border */
-    padding: 15px 32px; /* Spacing inside the button */
-    text-align: center; /* Text alignment */
-    text-decoration: none; /* No underline */
-    display: inline-block; /* Inline button */
-    font-size: 16px; /* Text size */
-    margin: 10px 0; /* Margin around the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-}
-
-.btn-appendix:hover {
-    background-color: #ad6a42; /* Darker green on hover */
-}
-/* Footer stays at the bottom and is not covered */
 footer {
   background-color: #ad6a42;
   color: #f4e6c1;
@@ -343,12 +244,77 @@ footer {
   align-items: center;
   padding: 15px 30px;
   font-family: 'Recoleta', serif;
-  position: relative; /* Changed to relative to maintain flow */
+  position: relative;
   width: 100%;
-  margin-top: auto; /* Forces footer to be pushed to the bottom */
+  margin-top: auto;
 }
 
-/* Resize Professionalism Images */
+footer a:hover {
+  opacity: .5;
+}
+
+footer p {
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.social-media-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media-icons img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-media-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Download Button */
+.download-btn {
+  display: inline-block;
+  background-color: #ad6a42;
+  color: #f4e6c1;
+  font-size: 1.2em;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.download-btn:hover {
+  background-color: #935a38;
+  color: #f4e6c1;
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+}
+
+.btn-appendix {
+  background-color:#ad6a42;
+  color: #f4e6c1;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-appendix:hover {
+  transform: scale(1.1);
+  background-color: #ad6a42;
+}
+
+/* Professionalism Image */
 img.professionalism {
   width: 100%;
   max-width: 700px;
@@ -359,129 +325,20 @@ img.professionalism {
   border-radius: 10px;
 }
 
-/* ========== RESPONSIVE STYLES ========== */
-
-/* Smaller Screens - Tablets and Below */
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .side-menu {
     position: static;
     width: 100%;
     height: auto;
     padding: 15px;
-    background-color: #f4e6c1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border-bottom: 1px solid #ccc;
   }
-
-  .side-menu li {
-    margin: 10px 15px;
-    font-size: 1rem;
-  }
-
   .corporate-info-container {
     margin-left: 0;
     width: 100%;
-    padding: 20px;
   }
-
   .content-section {
     width: 100%;
-    padding: 25px 20px;
-  }
-
-  .style-guide-images {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .style-guide-images img {
-    width: 80%;
-    height: auto;
-  }
-
-  .image-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image-grid img {
-    width: 90%;
-    max-width: 100%;
-  }
-
-  .platform-section {
     padding: 20px;
-  }
-
-  .platform-section h3,
-  .sub-section h4 {
-    font-size: 1.4rem;
-  }
-
-  .social-media-icons img {
-    width: 40px;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    padding-left: 10px;
-  }
-}
-
-/* Mobile Screens */
-@media (max-width: 600px) {
-  .navbar-brand img {
-    height: 40px;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-
-  .corporate-title {
-    font-size: 2rem;
-  }
-
-  .content-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .content-section h4 {
-    font-size: 1rem;
-  }
-
-  .platform-section h3 {
-    font-size: 1.2rem;
-  }
-
-  .btn-appendix,
-  .download-btn,
-  .social-media-btn {
-    font-size: 0.9em;
-    padding: 10px 18px;
-  }
-
-  footer {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    padding: 20px;
-  }
-
-  footer p {
-    flex-grow: unset;
-  }
-
-  .social-media-icons {
-    justify-content: center;
-  }
-
-  .professionalism {
-    width: 95%;
   }
 }
